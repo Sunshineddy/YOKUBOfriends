@@ -1,0 +1,4609 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* =====================================================================================
+  common class
+
+  update: 14/04/20
+
+  memo  :
+        通常フォント：font-size: 13px -> line-height: 22px;
+        見出し：    font-size: 30px -> line-height: ---; margin: ---; padding: 40px 0 30px;
+        中見出し： font-size: 16px -> line-height: inherit;
+
+        ・line-heightは個別に指定（余白やマージンがズレるため）
+
+				@include size(0,0);
+				@include absolute(0,0,0);
+				@include fixed(0,0,0);
+				@extend .clearfix;
+
+====================================================================================== */
+.clearfix:after, #top #news-wide:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0.1px;
+  font-size: 0.1em;
+  line-height: 0;
+  clear: both;
+}
+
+/* IE7pfloat */
+.clearfix, #top #news-wide {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix, * html #top #news-wide, #top * html #news-wide {
+  height: 1%;
+}
+
+/* End hide from IE-mac */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #000;
+  font-size: 13px;
+}
+
+a {
+  outline: none;
+}
+
+.sp {
+  display: none;
+}
+
+a:link, a:visited {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+a:hover, a:active {
+  color: #999;
+  text-decoration: none;
+}
+
+/*================================================================================
+	COMMONS
+================================================================================*/
+#wrapper {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+  width: 100%;
+  min-width: 980px;
+  height: 100%;
+}
+
+#container {
+  color: #333333;
+  text-align: center;
+  font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","Osaka","Osaka－等幅","Osaka-Mono","ＭＳ Ｐゴシック",sans-serif;
+  min-width: 980px;
+}
+#container .inner {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.noCentering .inner {
+  top: 0% !important;
+  left: 50% !important;
+  margin: 50px 0 0 -490px !important;
+}
+
+#imageContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-width: 960px;
+  height: 100%;
+}
+
+/*================================================================================
+	HEADER
+================================================================================*/
+#header {
+  display: block;
+  width: 100%;
+  min-width: 980px;
+  height: 8px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: #549ce6;
+}
+
+/*================================================================================
+	GLOBAL NAVIGATION
+================================================================================*/
+#global {
+  position: fixed;
+  /*bottom: 126px;*/
+  bottom: 145px;
+  z-index: 11;
+  background: url(/p4u2/cdn/common/img/nav_bg_base.png) center 0 repeat-x;
+  width: 100%;
+  min-width: 980px;
+  height: 96px;
+  border-bottom: 3px solid #231815;
+}
+#global .topExt {
+  opacity: 0;
+  width: 1000px;
+  height: 105px;
+  background: url(/p4u2/cdn/common/img/nav_bg_base_y.png) center 0 repeat-x;
+  position: absolute;
+}
+#global .dlcExt {
+  opacity: 0;
+  width: 1000px;
+  height: 105px;
+  background: url(/p4u2/cdn/common/img/nav_bg_base_y.png) center 0 repeat-x;
+  position: absolute;
+  right: 0;
+}
+#global .globalBg {
+  background: url(/p4u2/cdn/common/img/nav_bg.png) center 0 no-repeat;
+  display: table;
+  margin: 0 auto;
+  position: relative;
+}
+#global .globalOver {
+  position: absolute;
+  background: url(/p4u2/cdn/common/img/nav_bg_over.png) center 0 no-repeat;
+  display: table;
+  width: 100%;
+  height: 96px;
+  margin: 0 auto;
+  opacity: 0;
+}
+#global .nav {
+  display: table;
+  margin: 0 auto;
+  position: relative;
+  left: 5px;
+}
+#global .nav li {
+  display: table-cell;
+  position: relative;
+  /*&.navTop a:after{ left: 3px;}*/
+  /*&.navInfo a:after{ left: 3px;}*/
+  /*&.navStory a:after{ left: 3px;}*/
+  /*&.navMode a:after{ left: 3px;}*/
+  /*&.navGuide a:after{ left: 3px;}*/
+  /*&.navSpecial a:after{ left: 3px;}*/
+  /*&.navDlc a:after{ left: 3px;}*/
+  /*&.navStory a:after,*/
+  /*&.navChara a:after,*/
+  /*&.navMode a:after,*/
+  /*&.navGuide a:after,*/
+}
+#global .nav li a {
+  display: block;
+  position: relative;
+}
+#global .nav li a:after {
+  content: '';
+  background: url(/p4u2/cdn/common/img/icon_new.png) 0 0 no-repeat;
+  width: 80px;
+  height: 48px;
+  opacity: 1;
+  position: absolute;
+  left: 3px;
+  top: -12px;
+  z-index: 1;
+  display: none;
+  pointer-events: none;
+}
+#global .nav li .nav__new {
+  content: '';
+  background: url(/p4u2/cdn/common/img/icon_new.png) 0 0 no-repeat;
+  width: 80px;
+  height: 48px;
+  opacity: 1;
+  position: absolute;
+  left: 3px;
+  top: -12px;
+  z-index: 1;
+  display: none;
+  pointer-events: none;
+}
+#global .nav li.navChara a:after {
+  left: 4px;
+}
+#global .nav li.navDlc a:after {
+  display: block;
+}
+
+#top #global .topExt {
+  display: block;
+  width: 1000px;
+  height: 105px;
+  background: url(/p4u2/cdn/common/img/nav_bg_base_y.png) center 0 repeat-x;
+  position: absolute;
+  opacity: 1 !important;
+}
+
+#dlcTop #global .dlcExt,
+#dlcListUnder #global .dlcExt,
+#dlcListDetail #global .dlcExt {
+  display: block;
+  width: 1000px;
+  height: 105px;
+  background: url(/p4u2/cdn/common/img/nav_bg_base_y.png) center 0 repeat-x;
+  position: absolute;
+  opacity: 1 !important;
+  right: 0;
+}
+
+#top .globalBg {
+  background-position: center 0;
+}
+
+#information .globalBg {
+  background-position: center -96px;
+}
+
+#storyTop .globalBg,
+#storyDetail .globalBg {
+  background-position: center -192px;
+}
+
+#charaTop .globalBg,
+#charaDetail .globalBg {
+  background-position: center -288px;
+}
+
+#modeTop .globalBg,
+#modeGa .globalBg,
+#modeLobby .globalBg,
+#modeBattle .globalBg,
+#modePractice .globalBg,
+#modeOption .globalBg {
+  background-position: center -384px;
+}
+
+#guideTop .globalBg {
+  background-position: center -480px;
+}
+
+#specialTop .globalBg,
+#specialMovie .globalBg,
+#specialTw .globalBg,
+#specialPackage01 .globalBg,
+#specialDlcCard01 .globalBg,
+#specialPackageVisual .globalBg,
+#specialGoods .globalBg,
+#specialCountdown .globalBg,
+#specialWp .globalBg {
+  background-position: center -576px;
+}
+
+#dlcTop .globalBg,
+#dlcListUnder .globalBg,
+#dlcListDetail .globalBg {
+  background-position: center -672px;
+}
+
+#shopGuide .globalBg {
+  background-position: center -768px;
+}
+
+#sns {
+  position: fixed;
+  top: 21px;
+  right: 15px;
+  z-index: 12;
+}
+#sns .share {
+  position: absolute;
+  right: 38px;
+  top: 2px;
+  z-index: 0;
+  background: url(/p4u2/cdn/common/img/sns_share_bg.png) center 0 no-repeat;
+  width: 169px;
+  height: 33px;
+  overflow: hidden;
+}
+#sns .share.open {
+  background: url(/p4u2/cdn/common/img/sns_share_bg_open.png) center 0 no-repeat;
+}
+#sns .share a {
+  display: block;
+  width: 169px;
+  height: 33px;
+}
+#sns .share .icon {
+  position: absolute;
+  left: 17px;
+  top: 7px;
+  z-index: 0;
+}
+#sns .share .num {
+  position: absolute;
+  left: 70px;
+  top: 5px;
+  z-index: 0;
+  color: #fff34e;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100px;
+}
+#sns .share-total {
+  line-height: 28px;
+  text-align: left;
+  color: #000;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  width: 170px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+#sns .share-total a {
+  color: inherit;
+  text-decoration: none;
+}
+#sns .share-total span {
+  margin-right: 10px;
+  display: inline-block;
+  white-space: nowrap;
+  width: 70px;
+}
+#sns .tw {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 0;
+}
+#sns .fb {
+  position: absolute;
+  right: 0px;
+  top: 36px;
+  z-index: 0;
+}
+#sns .line {
+  position: absolute;
+  right: 0px;
+  top: 76px;
+  z-index: 0;
+}
+
+/*================================================================================
+	FOOTER
+================================================================================*/
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 10px;
+  z-index: 10;
+}
+#footer .inner {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#banners {
+  height: 76px;
+}
+#banners ul {
+  display: table;
+  width: 980px;
+  height: 35px;
+  margin: 0 auto 6px auto;
+}
+#banners .last {
+  margin-bottom: 0 !important;
+}
+#banners li {
+  display: block;
+  /*display: table-cell;*/
+  background: url(/p4u2/cdn/common/img/ft_bnr_frame_h35.png) 0 0 no-repeat;
+  margin: 0 6px 0 0;
+  width: 132px;
+  height: 35px !important;
+  float: left;
+}
+#banners li img {
+  vertical-align: top;
+}
+
+#provide {
+  width: 960px;
+  display: table;
+  margin: 10px auto 0;
+}
+#provide li {
+  display: table-cell;
+  padding-right: 14px;
+}
+#provide .pst,
+#provide .atlus {
+  padding-right: 12px;
+}
+#provide .pst {
+  padding-left: 10px;
+}
+
+/*================================================================================
+	960 × 600
+================================================================================*/
+.fixedMinimum {
+  height: 600px !important;
+}
+.fixedMinimum #container .inner {
+  height: 600px;
+  padding-bottom: 200px;
+}
+.fixedMinimum #global {
+  bottom: 0;
+  left: 0;
+}
+.fixedMinimum #footer {
+  position: fixed;
+  bottom: -84px;
+  padding-bottom: 10px;
+}
+
+.minimum {
+  height: 600px !important;
+  padding-bottom: 200px;
+}
+.minimum #container .inner {
+  height: 600px;
+  padding-bottom: 200px;
+}
+.minimum #global {
+  position: fixed;
+  bottom: 0;
+}
+.minimum #footer {
+  position: fixed;
+  bottom: -84px;
+  padding-bottom: 10px;
+}
+
+/*================================================================================
+	MODULE STYLE
+================================================================================*/
+.block {
+  position: relative;
+}
+
+.mb10 {
+  margin-bottom: 10px !important;
+}
+
+.mb15 {
+  margin-bottom: 15px !important;
+}
+
+.mb20 {
+  margin-bottom: 20px !important;
+}
+
+.mb25 {
+  margin-bottom: 25px !important;
+}
+
+.mb30 {
+  margin-bottom: 30px !important;
+}
+
+.mb35 {
+  margin-bottom: 35px !important;
+}
+
+.mb40 {
+  margin-bottom: 40px !important;
+}
+
+/* =====================================================================================
+  TOP
+
+  update: 14/04/20
+				
+				@include size(0,0);
+				@include absolute(0,0,0);
+				@include fixed(0,0,0);
+				@extend .clearfix;
+
+====================================================================================== */
+#top {
+  /*#imageContainer,
+  #container,
+  #glass01,
+  #glass02,
+  #glass03,
+  #global,
+  #footer{
+  	opacity: 0;
+  }*/
+  /* 横1列ニュース */
+  /* カウントダウン用ニュース */
+  /* カウントダウン */
+  /* ネタバレ禁止告知 */
+}
+#top #glass01,
+#top #glass02,
+#top #glass03 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 960px;
+  height: 100%;
+}
+#top .fixedUnder {
+  position: fixed;
+  bottom: 504px;
+}
+#top #logo {
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  z-index: 0;
+}
+#top #logo-s {
+  position: absolute;
+  left: -10px;
+  top: -29px;
+  z-index: 0;
+}
+#top #movie-nico {
+  /*@include absolute(335,-2,0);*/
+  position: absolute;
+  left: 650px;
+  top: 50px;
+  z-index: 0;
+  width: 285px;
+  height: 199px;
+  background: url(/p4u2/cdn/img/top/bg_nico.png) 0 0 no-repeat;
+}
+#top #movie-nico .nico-wrap {
+  position: relative;
+}
+#top #movie-nico .nico-wrap .nico-player {
+  position: absolute;
+  left: 18px;
+  top: 8px;
+  z-index: 0;
+  width: 240px;
+  height: 185px;
+}
+#top #onsale {
+  position: absolute;
+  left: -35px;
+  top: -40px;
+  z-index: 0;
+}
+#top #catch {
+  position: fixed;
+  top: 0;
+  padding-left: 108px;
+  z-index: 1;
+}
+#top .news {
+  display: none;
+}
+#top .news dt, #top .news .date {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #fff34e;
+  text-decoration: underline;
+  margin: 0 0 6px;
+  display: block;
+}
+#top .news dd, #top .news .detail {
+  font-size: 13px;
+  line-height: 18px;
+  color: #fff;
+  display: block;
+}
+#top #news01 {
+  text-align: left;
+  background: url(/p4u2/cdn/img/top/news_bg01.png) 0 0 no-repeat;
+  position: absolute;
+  left: 377px;
+  top: 136px;
+  z-index: 0;
+  width: 244px;
+  height: 84px;
+  padding: 30px 36px 0 36px;
+}
+#top #news02 {
+  text-align: left;
+  background: url(/p4u2/cdn/img/top/news_bg02.png) 0 0 no-repeat;
+  position: absolute;
+  left: 678px;
+  top: 124px;
+  z-index: 0;
+  width: 244px;
+  height: 96px;
+  padding: 42px 36px 0 36px;
+}
+#top #news-wide {
+  width: 986px;
+  height: 53px;
+  position: absolute;
+  left: -10px;
+  top: 197px;
+  z-index: 10;
+  background: url(/p4u2/cdn/img/top/bg_news_wide.png) 0 0 no-repeat;
+  overflow: hidden;
+}
+#top #news-wide .news {
+  margin: 0 0 0 80px;
+  padding-top: 18px;
+}
+#top #news-wide .entry {
+  width: 450px;
+  height: 25px;
+  margin: 0 0 0 0;
+  float: left;
+  text-align: left;
+}
+#top #news-wide .date {
+  font-size: 13px !important;
+  width: 75px;
+  display: block;
+  float: left;
+  padding-top: 2px;
+}
+#top #news-wide .detail {
+  font-size: 10px !important;
+  line-height: 16px !important;
+  width: 370px;
+  display: block;
+  float: left;
+  padding-top: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#top #news-cd {
+  text-align: left;
+  background: url(/p4u2/cdn/img/top/news_bgcd.png) 0 0 no-repeat;
+  position: absolute;
+  left: 365px;
+  top: 75px;
+  z-index: 0;
+  /*@include absolute(715,75,0);*/
+  width: 259px;
+  height: 175px;
+  padding-top: 30px;
+}
+#top #news-cd .entry {
+  margin: 0 20px 10px 30px;
+}
+#top #news-cd dt, #top #news-cd .date {
+  font-size: 16px !important;
+}
+#top #news-cd dd, #top #news-cd .detail {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  /*a:link,a:visited{
+  	text-decoration: none !important;
+  }
+  a:hover,a:active{
+  	text-decoration: none !important;
+  	color: #CCC !important;
+  }*/
+}
+#top #countdown {
+  /*@include absolute(630,70,0);*/
+  position: absolute;
+  left: 630px;
+  top: 15px;
+  z-index: 0;
+}
+#top #countdown .cd-inner {
+  position: relative;
+  width: 295px;
+  height: 179px;
+  background: url(/p4u2/cdn/img/top/cd_bg.png) 0 0 no-repeat;
+  /*border: #ff0 solid 1px;*/
+}
+#top #countdown .cd-chara {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  bottom: 31px;
+  z-index: 0;
+}
+#top #countdown .cd-reserve {
+  position: absolute;
+  left: 172px;
+  top: 2px;
+  z-index: 10;
+}
+#top #countdown .cd-num {
+  position: absolute;
+  left: 12px;
+  top: 105px;
+  z-index: 9;
+}
+#top #countdown .cd-voice {
+  cursor: pointer;
+  position: absolute;
+  left: 163px;
+  top: -5px;
+  z-index: 9;
+}
+#top #countdown .cd-0811 .cd-chara {
+  left: -17px !important;
+}
+#top #forced-overlay {
+  background: url(/p4u2/cdn/img/top/caution_bg.png) 0 0 repeat;
+}
+#top .releaseCaution {
+  height: 100%;
+  /*display: none;*/
+  text-align: center;
+}
+#top .releaseCaution .cation-wrap {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+}
+#top .releaseCaution .cation-wrap .kuma {
+  position: absolute;
+  left: 43px;
+  /*bottom: 0;*/
+  bottom: -100px;
+  z-index: 1;
+  width: 880px;
+  height: 620px;
+  opacity: 0;
+}
+#top .releaseCaution .cation-wrap .comment {
+  position: absolute;
+  left: 48px;
+  /*bottom: 450px;*/
+  bottom: 350px;
+  z-index: 0;
+  width: 534px;
+  height: 354px;
+  opacity: 0;
+}
+#top .releaseCaution .cation-wrap .caps {
+  position: absolute;
+  left: 598px;
+  /*bottom: 612px;*/
+  bottom: 512px;
+  z-index: 0;
+  width: 265px;
+  height: 192px;
+  opacity: 0;
+}
+#top .releaseCaution .cation-wrap .winClose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  width: 55px;
+  height: 55px;
+  opacity: 0;
+}
+#top .dammy-btn {
+  width: 1px;
+  height: 1px;
+  line-height: 1px;
+  font-size: 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#top .minimum .fixedUnder,
+#top .fixedMinimum .fixedUnder {
+  bottom: 360px !important;
+}
+#top .minimum .inner,
+#top .fixedMinimum .inner {
+  top: 0 !important;
+}
+
+/* =====================================================================================
+  STORY
+
+  update: 14/04/20
+				
+				@include size(0,0);
+				@include absolute(0,0,0);
+				@include fixed(0,0,0);
+				@extend .clearfix;
+
+====================================================================================== */
+#storyTop {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+}
+#storyTop #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+}
+#storyTop #storyList {
+  display: table;
+  margin: 0 auto;
+}
+#storyTop #storyList li {
+  position: relative;
+  display: table-cell;
+  padding-right: 11px;
+}
+#storyTop #storyList li:last-child {
+  padding-right: 0;
+}
+#storyTop #storyList li.dlc a:after {
+  content: '';
+  background: url(/p4u2/cdn/img/story/top/ico_dlc.png) 0 0 no-repeat;
+  width: 105px;
+  height: 99px;
+  opacity: 1;
+  position: absolute;
+  left: -27px;
+  top: -20px;
+  z-index: 1;
+  pointer-events: none;
+}
+#storyTop #storyList li.dlc:hover a:after {
+  opacity: 0.5;
+}
+#storyTop .blank {
+  background: url(/p4u2/cdn/img/story/top/btn_story_blank.png) 0 0 no-repeat;
+  width: 231px;
+  height: 486px;
+}
+
+#storyDetail {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+  /* -------------------------------------------------- RETURNボタン */
+}
+#storyDetail #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -540px 0 0 -490px;
+  padding-bottom: 260px;
+}
+#storyDetail .fixedMinimum #container .inner {
+  margin: -500px 0 0 -490px;
+}
+#storyDetail .minimum #container .inner {
+  margin: -520px 0 0 -490px;
+}
+#storyDetail #storyInfo {
+  display: table;
+  margin: -30px auto 0;
+}
+#storyDetail #storyInfo img {
+  position: relative;
+  left: -40px;
+}
+#storyDetail .blank {
+  background: url(/p4u2/cdn/img/story/top/btn_story_blank.png) 0 0 no-repeat;
+  width: 231px;
+  height: 486px;
+}
+#storyDetail .btnReturn {
+  text-align: center;
+  margin-top: 10px;
+}
+#storyDetail .btnReturn a {
+  display: inline-block !important;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+/* =====================================================================================
+  CHARACTER
+
+  update: 14/04/20
+				
+				@include size(0,0);
+				@include absolute(0,0,0);
+				@include fixed(0,0,0);
+				@extend .clearfix;
+
+====================================================================================== */
+#charaTop {
+  /* コンテナの位置設定 */
+}
+#charaTop #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+  padding-bottom: 280px;
+}
+#charaTop .minimum #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -350px 0 0 -490px !important;
+}
+#charaTop .fixedMinimum #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -300px 0 0 -490px !important;
+}
+#charaTop .charaNav {
+  display: table;
+  margin: 0 auto 22px;
+}
+#charaTop .charaNav li {
+  display: table-cell;
+}
+#charaTop .charaNav li:first-child {
+  padding-right: 7px;
+}
+#charaTop .charaNav li.active {
+  opacity: 0.5;
+  pointer-events: none;
+}
+#charaTop .thumbList {
+  display: table;
+  margin: 0 auto;
+  padding: 12px 0 0 5px;
+  overflow: hidden;
+}
+#charaTop .thumbList li {
+  position: relative;
+  z-index: 0;
+  float: left;
+  display: inline;
+  width: 158px;
+  height: 121px;
+  margin-top: 12px;
+  margin-right: 3px;
+}
+#charaTop .thumbList li.blank {
+  background: url(/p4u2/cdn/img/character/top/thumb_blank.png) 0 0 no-repeat;
+}
+#charaTop .thumbList li .ov {
+  background: url(/p4u2/cdn/img/character/top/mouse_over.png) 0 0 no-repeat;
+  width: 158px;
+  height: 121px;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+#charaTop .thumbList li.movie a:after {
+  content: '';
+  background: url(/p4u2/cdn/img/character/top/icon_movie.png) 0 0 no-repeat;
+  width: 86px;
+  height: 51px;
+  opacity: 1;
+  position: absolute;
+  left: -3px;
+  top: -12px;
+  z-index: 1;
+}
+#charaTop .thumbList li.movie a .ov {
+  background: url(/p4u2/cdn/img/character/top/mouse_over_movie.png) 0 0 no-repeat;
+  width: 160px;
+  height: 133px;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  left: -2px;
+  top: -12px;
+  z-index: 2;
+}
+#charaTop .thumbList li.new a:after {
+  content: '';
+  background: url(/p4u2/cdn/img/character/top/icon_new.png) 0 0 no-repeat;
+  width: 86px;
+  height: 51px;
+  opacity: 1;
+  position: absolute;
+  left: 0px;
+  top: -10px;
+  z-index: 1;
+}
+#charaTop .thumbList li.new a .ov {
+  background: url(/p4u2/cdn/img/character/top/mouse_over_new.png) 0 0 no-repeat;
+  width: 160px;
+  height: 133px;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: -10px;
+  z-index: 2;
+}
+#charaTop .thumbList li.cs:after {
+  content: '';
+  background: url(/p4u2/cdn/img/character/top/icon_cs.png) 0 0 no-repeat;
+  width: 104px;
+  height: 62px;
+  opacity: 1;
+  position: absolute;
+  left: -5px;
+  top: -15px;
+  z-index: 1;
+}
+#charaTop .thumbList li.cs .ov {
+  background: url(/p4u2/cdn/img/character/top/mouse_over_new.png) 0 0 no-repeat;
+  width: 160px;
+  height: 133px;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: -10px;
+  z-index: 2;
+}
+#charaTop .thumbList li.dlc:before {
+  content: '';
+  background: url(/p4u2/cdn/img/character/top/icon_dlc.png) 0 0 no-repeat;
+  width: 48px;
+  height: 45px;
+  opacity: 1;
+  position: absolute;
+  left: 114px;
+  top: 79px;
+  z-index: 1;
+  pointer-events: none;
+}
+#charaTop .thumbList li.dlc .ov {
+  background: url(/p4u2/cdn/img/character/top/mouse_over_new.png) 0 0 no-repeat;
+  width: 160px;
+  height: 133px;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: -10px;
+  z-index: 2;
+}
+#charaTop .prev, #charaTop .next {
+  position: fixed;
+  top: 40%;
+  z-index: 10;
+}
+#charaTop .prev {
+  left: 22px;
+}
+#charaTop .next {
+  right: 22px;
+}
+
+#charaDetail {
+  /* コンテナの位置設定 */
+  /*  キャラクター名前 */
+  /*  キャラクターイメージ */
+  /*  ペルソナイメージ */
+  /* CV紹介 */
+  /* スキル紹介 */
+  /* シャドウのボックス背景 */
+  /* -------------------------------------------------- 岳羽ゆかり */
+  /* -------------------------------------------------- 伊織順平 */
+  /* -------------------------------------------------- 主人公（鳴上悠） */
+  /* -------------------------------------------------- 花村陽介 */
+  /* -------------------------------------------------- 里中千枝 */
+  /* -------------------------------------------------- 天城雪子 */
+  /* -------------------------------------------------- 巽 完二 */
+  /* -------------------------------------------------- クマ */
+  /* -------------------------------------------------- 白鐘直斗 */
+  /* -------------------------------------------------- アイギス */
+  /* -------------------------------------------------- ラビリス */
+  /* -------------------------------------------------- シャドウラビリス */
+  /* -------------------------------------------------- 桐条美鶴 */
+  /* -------------------------------------------------- 真田明彦 */
+  /* -------------------------------------------------- 皆月翔 */
+  /* -------------------------------------------------- ミナヅキショウ */
+  /* -------------------------------------------------- エリザベス */
+  /* -------------------------------------------------- 天田コロマル */
+  /* -------------------------------------------------- 足立 */
+  /* -------------------------------------------------- マリー */
+  /* -------------------------------------------------- マーガレット */
+  /* -------------------------------------------------- 共通フォーマット */
+  /* -------------------------------------------------- ウィンドウサイズが小さい場合 */
+}
+#charaDetail #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+}
+#charaDetail #charaName {
+  position: absolute;
+  left: 177px;
+  top: 84px;
+  z-index: 2;
+}
+#charaDetail #charaImg {
+  position: absolute;
+  left: 242px;
+  top: -170px;
+  z-index: 1;
+}
+#charaDetail #personaImg {
+  position: absolute;
+  left: -186px;
+  top: -250px;
+  z-index: 0;
+}
+#charaDetail #boxCV {
+  position: absolute;
+  left: 294px;
+  top: 276px;
+  z-index: 2;
+  background: url(/p4u2/cdn/img/character/box_bg01.png) 0 0 no-repeat;
+  width: 351px;
+  height: 198px;
+  text-align: left;
+}
+#charaDetail #boxCV dl.cv {
+  position: absolute;
+  left: 44px;
+  top: 42px;
+  z-index: 0;
+}
+#charaDetail #boxCV dl.cv dd {
+  margin-top: 1px;
+}
+#charaDetail #boxCV dl.voice {
+  position: absolute;
+  left: 44px;
+  top: 66px;
+  z-index: 0;
+}
+#charaDetail #boxCV dt {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail #boxCV dd {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail #boxCV dd a, #charaDetail #boxCV dd span {
+  display: inline-block !important;
+  margin-left: -11px;
+}
+#charaDetail #boxCV .info {
+  position: absolute;
+  left: 44px;
+  top: 96px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 270px;
+}
+#charaDetail #boxSkill {
+  position: absolute;
+  left: 236px;
+  top: 428px;
+  z-index: 2;
+  background: url(/p4u2/cdn/img/character/box_bg02.png) 0 0 no-repeat;
+  width: 352px;
+  height: 184px;
+  text-align: left;
+}
+#charaDetail #boxSkill dl.weapon {
+  position: absolute;
+  left: 62px;
+  top: 24px;
+  z-index: 0;
+}
+#charaDetail #boxSkill dl.type {
+  position: absolute;
+  left: 62px;
+  top: 46px;
+  z-index: 0;
+}
+#charaDetail #boxSkill dt {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail #boxSkill dd {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+}
+#charaDetail #boxSkill dd a {
+  display: inline-block !important;
+  margin-left: -11px;
+}
+#charaDetail #boxSkill .info {
+  position: absolute;
+  left: 62px;
+  top: 73px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail #boxSkill .btnCmnd {
+  position: absolute;
+  left: 62px;
+  top: 120px;
+  z-index: 0;
+}
+#charaDetail.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01.png) 0 0 no-repeat;
+}
+#charaDetail.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg02.png) 0 0 no-repeat;
+}
+#charaDetail .btnShadow {
+  position: absolute;
+  left: 216px;
+  top: 574px;
+  z-index: 3;
+}
+#charaDetail .btnMovie {
+  position: fixed;
+  bottom: 310px;
+  margin-left: -50px !important;
+  z-index: 0;
+  width: 100%;
+  text-align: left;
+}
+#charaDetail .btnMovie a {
+  display: inline-block;
+}
+#charaDetail.character01 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara04.png) 0 0 no-repeat;
+  width: 352px;
+  height: 213px;
+}
+#charaDetail.character01.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg03.png) 0 0 no-repeat !important;
+}
+#charaDetail.character01 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg03.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 296px !important;
+  top: 449px !important;
+}
+#charaDetail.character01 #boxSkill dl.weapon {
+  position: absolute;
+  left: 56px;
+  top: 35px;
+  z-index: 0;
+}
+#charaDetail.character01 #boxSkill dl.type {
+  position: absolute;
+  left: 54px;
+  top: 57px;
+  z-index: 0;
+}
+#charaDetail.character01 #boxSkill dt {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character01 #boxSkill dd {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character01 #boxSkill dd a {
+  display: inline-block !important;
+  margin-left: -11px;
+}
+#charaDetail.character01 #boxSkill .info {
+  position: absolute;
+  left: 56px;
+  top: 85px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character01 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 56px;
+  top: 138px;
+  z-index: 0;
+}
+#charaDetail.character01 #charaImg {
+  left: 256px !important;
+  top: -170px !important;
+}
+#charaDetail.character01 .btnMovie {
+  margin-left: -50px !important;
+}
+#charaDetail.character01 .btnShadow {
+  left: 276px !important;
+  top: 616px !important;
+}
+#charaDetail.character01.sdw .btnMovie {
+  margin-left: -50px;
+}
+#charaDetail.character02 #personaImg {
+  left: -156px !important;
+  top: -150px !important;
+}
+#charaDetail.character02 #charaImg {
+  left: 422px !important;
+  top: -210px !important;
+}
+#charaDetail.character03 .btnMovie {
+  margin-left: -50px;
+}
+#charaDetail.character03 #personaImg {
+  left: -110px !important;
+  top: 50px !important;
+}
+#charaDetail.character03 #charaImg {
+  left: 492px !important;
+  top: -270px !important;
+}
+#charaDetail.character04 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character04 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara04.png) 0 0 no-repeat;
+  width: 352px;
+  height: 213px;
+  left: 396px !important;
+  top: 268px !important;
+}
+#charaDetail.character04 #boxSkill {
+  left: 336px !important;
+  top: 435px !important;
+}
+#charaDetail.character04 .btnCmnd {
+  top: 110px !important;
+}
+#charaDetail.character04 .btnShadow {
+  left: 314px;
+  top: 579px;
+}
+#charaDetail.character04 #charaName {
+  position: absolute;
+  left: 318px;
+  top: 70px;
+  z-index: 2;
+}
+#charaDetail.character04 #personaImg {
+  left: 318px !important;
+  top: 297px !important;
+}
+#charaDetail.character04 #charaImg {
+  left: -152px !important;
+  top: -36px !important;
+}
+#charaDetail.character04.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character05 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character05 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara04.png) 0 0 no-repeat;
+  width: 352px;
+  height: 213px;
+  left: 273px !important;
+  top: 275px !important;
+}
+#charaDetail.character05 #boxSkill {
+  left: 269px !important;
+  top: 448px !important;
+}
+#charaDetail.character05 .btnCmnd {
+  top: 110px !important;
+}
+#charaDetail.character05 .btnShadow {
+  left: 250px;
+  top: 592px;
+}
+#charaDetail.character05 #charaName {
+  position: absolute;
+  left: 133px;
+  top: 80px;
+  z-index: 2;
+}
+#charaDetail.character05 #personaImg {
+  left: -96px !important;
+  top: 28px !important;
+}
+#charaDetail.character05 #charaImg {
+  left: 246px !important;
+  top: 0px !important;
+}
+#charaDetail.character05.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character06 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character06 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara04.png) 0 0 no-repeat;
+  width: 352px;
+  height: 213px;
+  left: 262px !important;
+  top: 268px !important;
+}
+#charaDetail.character06 #boxSkill {
+  left: 268px !important;
+  top: 442px !important;
+}
+#charaDetail.character06 .btnCmnd {
+  top: 110px !important;
+}
+#charaDetail.character06 .btnShadow {
+  left: 246px;
+  top: 600px;
+}
+#charaDetail.character06 #charaName {
+  position: absolute;
+  left: 194px;
+  top: 77px;
+  z-index: 2;
+}
+#charaDetail.character06 #personaImg {
+  left: -177px !important;
+  top: -36px !important;
+}
+#charaDetail.character06 #charaImg {
+  left: 510px !important;
+  top: 34px !important;
+}
+#charaDetail.character06.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character07 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character07 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara04.png) 0 0 no-repeat;
+  width: 352px;
+  height: 213px;
+  left: 290px !important;
+  top: 274px !important;
+}
+#charaDetail.character07 #boxSkill {
+  left: 293px !important;
+  top: 448px !important;
+}
+#charaDetail.character07 .btnCmnd {
+  top: 122px !important;
+}
+#charaDetail.character07 .btnShadow {
+  left: 273px;
+  top: 606px;
+}
+#charaDetail.character07 #charaName {
+  position: absolute;
+  left: 185px;
+  top: 82px;
+  z-index: 2;
+}
+#charaDetail.character07 #personaImg {
+  left: -76px !important;
+  top: -66px !important;
+}
+#charaDetail.character07 #charaImg {
+  left: 574px !important;
+  top: -190px !important;
+}
+#charaDetail.character07.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character08 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character08 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara04.png) 0 0 no-repeat;
+  width: 352px;
+  height: 213px;
+  left: 251px !important;
+  top: 274px !important;
+}
+#charaDetail.character08 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg03.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 280px !important;
+  top: 452px !important;
+}
+#charaDetail.character08 #boxSkill dl.weapon {
+  position: absolute;
+  left: 56px;
+  top: 30px;
+  z-index: 0;
+}
+#charaDetail.character08 #boxSkill dl.type {
+  position: absolute;
+  left: 54px;
+  top: 52px;
+  z-index: 0;
+}
+#charaDetail.character08 #boxSkill dt {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character08 #boxSkill dd {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character08 #boxSkill dd a {
+  display: inline-block !important;
+  margin-left: -11px;
+}
+#charaDetail.character08 #boxSkill .info {
+  position: absolute;
+  left: 56px;
+  top: 80px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character08 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 56px;
+  top: 130px;
+  z-index: 0;
+}
+#charaDetail.character08 .btnShadow {
+  left: 244px;
+  top: 624px;
+}
+#charaDetail.character08 #charaName {
+  position: absolute;
+  left: 145px;
+  top: 82px;
+  z-index: 2;
+}
+#charaDetail.character08 #personaImg {
+  left: -32px !important;
+  top: -20px !important;
+}
+#charaDetail.character08 #charaImg {
+  left: 314px !important;
+  top: -40px !important;
+}
+#charaDetail.character08 .minimum,
+#charaDetail.character08 .fixedMinimum {
+  top: -2px !important;
+}
+#charaDetail.character08.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character08.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg03.png) 0 0 no-repeat;
+}
+#charaDetail.character09 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character09 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara04.png) 0 0 no-repeat;
+  width: 352px;
+  height: 213px;
+  left: 605px !important;
+  top: 274px !important;
+}
+#charaDetail.character09 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg03.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 605px !important;
+  top: 448px !important;
+}
+#charaDetail.character09 #boxSkill dl.weapon {
+  position: absolute;
+  left: 56px;
+  top: 30px;
+  z-index: 0;
+}
+#charaDetail.character09 #boxSkill dl.type {
+  position: absolute;
+  left: 54px;
+  top: 52px;
+  z-index: 0;
+}
+#charaDetail.character09 #boxSkill dt {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character09 #boxSkill dd {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character09 #boxSkill dd a {
+  display: inline-block !important;
+  margin-left: -11px;
+}
+#charaDetail.character09 #boxSkill .info {
+  position: absolute;
+  left: 56px;
+  top: 80px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character09 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 56px;
+  top: 130px;
+  z-index: 0;
+}
+#charaDetail.character09 .btnShadow {
+  left: 576px;
+  top: 618px;
+}
+#charaDetail.character09 #charaName {
+  position: absolute;
+  left: 582px;
+  top: 60px;
+  z-index: 2;
+}
+#charaDetail.character09 #personaImg {
+  left: -73px !important;
+  top: -17px !important;
+}
+#charaDetail.character09 #charaImg {
+  left: 64px !important;
+  top: 99px !important;
+}
+#charaDetail.character09.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character09.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg03.png) 0 0 no-repeat;
+}
+#charaDetail.character10 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character10 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara04.png) 0 0 no-repeat;
+  width: 352px;
+  height: 213px;
+  left: 262px !important;
+  top: 267px !important;
+}
+#charaDetail.character10 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg03.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 303px !important;
+  top: 444px !important;
+}
+#charaDetail.character10 #boxSkill dl.weapon {
+  position: absolute;
+  left: 56px;
+  top: 30px;
+  z-index: 0;
+}
+#charaDetail.character10 #boxSkill dl.type {
+  position: absolute;
+  left: 54px;
+  top: 52px;
+  z-index: 0;
+}
+#charaDetail.character10 #boxSkill dt {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character10 #boxSkill dd {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character10 #boxSkill dd a {
+  display: inline-block !important;
+  margin-left: -11px;
+}
+#charaDetail.character10 #boxSkill .info {
+  position: absolute;
+  left: 56px;
+  top: 80px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character10 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 56px;
+  top: 141px;
+  z-index: 0;
+}
+#charaDetail.character10 .btnShadow {
+  left: 267px;
+  top: 615px;
+}
+#charaDetail.character10 #charaName {
+  position: absolute;
+  left: 197px;
+  top: 72px;
+  z-index: 2;
+}
+#charaDetail.character10 #personaImg {
+  left: -950px !important;
+  top: 15px !important;
+}
+#charaDetail.character10 #charaImg {
+  left: 359px !important;
+  top: 21px !important;
+}
+#charaDetail.character10.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character10.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg03.png) 0 0 no-repeat;
+}
+#charaDetail.character11 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character11 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara04.png) 0 0 no-repeat;
+  width: 352px;
+  height: 213px;
+  left: 255px !important;
+  top: 282px !important;
+}
+#charaDetail.character11 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg04.png) 0 0 no-repeat;
+  width: 392px;
+  height: 206px;
+  left: 268px !important;
+  top: 457px !important;
+}
+#charaDetail.character11 #boxSkill dl.weapon {
+  position: absolute;
+  left: 56px;
+  top: 35px;
+  z-index: 0;
+}
+#charaDetail.character11 #boxSkill dl.type {
+  position: absolute;
+  left: 54px;
+  top: 57px;
+  z-index: 0;
+}
+#charaDetail.character11 #boxSkill dt {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character11 #boxSkill dd {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character11 #boxSkill dd a {
+  display: inline-block !important;
+  margin-left: -11px;
+}
+#charaDetail.character11 #boxSkill .info {
+  position: absolute;
+  left: 56px;
+  top: 85px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character11 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 56px;
+  top: 138px;
+  z-index: 0;
+}
+#charaDetail.character11 .btnShadow {
+  left: 237px;
+  top: 628px;
+}
+#charaDetail.character11 #charaName {
+  position: absolute;
+  left: 196px;
+  top: 90px;
+  z-index: 2;
+}
+#charaDetail.character11 #personaImg {
+  left: -238px !important;
+  top: -44px !important;
+}
+#charaDetail.character11 #charaImg {
+  left: 383px !important;
+  top: -334px !important;
+}
+#charaDetail.character11.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character11.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg04.png) 0 0 no-repeat;
+}
+#charaDetail.character12 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character12 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara04.png) 0 0 no-repeat;
+  width: 352px;
+  height: 213px;
+  left: 262px !important;
+  top: 270px !important;
+}
+#charaDetail.character12.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg03.png) 0 0 no-repeat !important;
+}
+#charaDetail.character12 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg03.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 292px !important;
+  top: 446px !important;
+}
+#charaDetail.character12 #boxSkill dl.weapon {
+  position: absolute;
+  left: 56px;
+  top: 35px;
+  z-index: 0;
+}
+#charaDetail.character12 #boxSkill dl.type {
+  position: absolute;
+  left: 54px;
+  top: 57px;
+  z-index: 0;
+}
+#charaDetail.character12 #boxSkill dt {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character12 #boxSkill dd {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character12 #boxSkill dd a {
+  display: inline-block !important;
+  margin-left: -11px;
+}
+#charaDetail.character12 #boxSkill .info {
+  position: absolute;
+  left: 56px;
+  top: 85px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character12 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 56px;
+  top: 138px;
+  z-index: 0;
+}
+#charaDetail.character12 .btnShadow {
+  left: 256px;
+  top: 617px;
+}
+#charaDetail.character12 #charaName {
+  position: absolute;
+  left: 199px;
+  top: 73px;
+  z-index: 2;
+}
+#charaDetail.character12 #personaImg {
+  left: -242px !important;
+  top: -34px !important;
+}
+#charaDetail.character12 #charaImg {
+  left: 19px !important;
+  top: -103px !important;
+}
+#charaDetail.character12.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character12.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg04.png) 0 0 no-repeat;
+}
+#charaDetail.character13 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character13 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara13.png) 0 0 no-repeat;
+  width: 359px;
+  height: 239px;
+  left: 263px !important;
+  top: 306px !important;
+}
+#charaDetail.character13 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg02_chara13.png) 0 0 no-repeat;
+  width: 338px;
+  height: 184px;
+  left: 301px !important;
+  top: 507px !important;
+}
+#charaDetail.character13 #boxSkill dl.weapon {
+  position: absolute;
+  left: 45px;
+  top: 29px;
+  z-index: 0;
+}
+#charaDetail.character13 #boxSkill dl.type {
+  position: absolute;
+  left: 45px;
+  top: 49px;
+  z-index: 0;
+}
+#charaDetail.character13 #boxSkill dt {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character13 #boxSkill dd {
+  display: inline-block;
+  vertical-align: top;
+}
+#charaDetail.character13 #boxSkill dd a {
+  display: inline-block !important;
+  margin-left: -11px;
+}
+#charaDetail.character13 #boxSkill .info {
+  position: absolute;
+  left: 45px;
+  top: 80px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character13 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 47px;
+  top: 119px;
+  z-index: 0;
+}
+#charaDetail.character13 .btnShadow {
+  left: 256px;
+  top: 617px;
+}
+#charaDetail.character13 #charaName {
+  position: absolute;
+  left: 204px;
+  top: 43px;
+  z-index: 2;
+}
+#charaDetail.character13 #personaImg {
+  left: -248px !important;
+  top: -84px !important;
+}
+#charaDetail.character13 #charaImg {
+  left: 19px !important;
+  top: -103px !important;
+}
+#charaDetail.character13.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character13.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg04.png) 0 0 no-repeat;
+}
+#charaDetail.character14 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character14 #boxCV {
+  width: 352px;
+  height: 213px;
+  left: 286px !important;
+  top: 249px !important;
+}
+#charaDetail.character14.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01.png) 0 0 no-repeat !important;
+  width: 352px;
+  height: 213px;
+}
+#charaDetail.character14.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg03.png) 0 0 no-repeat !important;
+}
+#charaDetail.character14 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg03.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 300px !important;
+  top: 408px !important;
+}
+#charaDetail.character14 #boxSkill dl.weapon {
+  position: absolute;
+  left: 48px;
+  top: 30px;
+  z-index: 0;
+}
+#charaDetail.character14 #boxSkill dl.type {
+  position: absolute;
+  left: 48px;
+  top: 52px;
+  z-index: 0;
+}
+#charaDetail.character14 #boxSkill .info {
+  position: absolute;
+  left: 48px;
+  top: 80px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character14 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 50px;
+  top: 140px;
+  z-index: 0;
+}
+#charaDetail.character14 .btnShadow {
+  left: 264px;
+  top: 580px;
+}
+#charaDetail.character14 #charaName {
+  position: absolute;
+  left: 176px;
+  top: 54px;
+  z-index: 2;
+}
+#charaDetail.character14 #personaImg {
+  left: -158px !important;
+  top: 73px !important;
+}
+#charaDetail.character14 #charaImg {
+  left: -169px !important;
+  top: 31px !important;
+}
+#charaDetail.character14.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character14.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg04.png) 0 0 no-repeat;
+}
+#charaDetail.character15 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character15 #boxCV {
+  width: 352px;
+  height: 213px;
+  left: 280px !important;
+  top: 270px !important;
+}
+#charaDetail.character15.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01.png) 0 0 no-repeat !important;
+  width: 352px;
+  height: 213px;
+}
+#charaDetail.character15.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg03.png) 0 0 no-repeat !important;
+}
+#charaDetail.character15 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg03.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 294px !important;
+  top: 429px !important;
+}
+#charaDetail.character15 #boxSkill dl.weapon {
+  position: absolute;
+  left: 48px;
+  top: 30px;
+  z-index: 0;
+}
+#charaDetail.character15 #boxSkill dl.type {
+  position: absolute;
+  left: 48px;
+  top: 52px;
+  z-index: 0;
+}
+#charaDetail.character15 #boxSkill .info {
+  position: absolute;
+  left: 48px;
+  top: 80px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character15 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 50px;
+  top: 140px;
+  z-index: 0;
+}
+#charaDetail.character15 .btnShadow {
+  left: 258px;
+  top: 600px;
+}
+#charaDetail.character15 #charaName {
+  position: absolute;
+  left: 200px;
+  top: 77px;
+  z-index: 2;
+}
+#charaDetail.character15 #personaImg {
+  left: -57px !important;
+  top: -60px !important;
+}
+#charaDetail.character15 #charaImg {
+  left: 159px !important;
+  top: 38px !important;
+}
+#charaDetail.character15.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character15.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg04.png) 0 0 no-repeat;
+}
+#charaDetail.character16 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character16 #boxCV {
+  width: 352px;
+  height: 213px;
+  left: 511px !important;
+  top: 264px !important;
+}
+#charaDetail.character16 #boxCV dl.cv {
+  position: absolute;
+  left: 44px;
+  top: 37px;
+  z-index: 0;
+}
+#charaDetail.character16 #boxCV dl.voice {
+  position: absolute;
+  left: 44px;
+  top: 63px;
+  z-index: 0;
+}
+#charaDetail.character16 #boxCV .info {
+  position: absolute;
+  left: 44px;
+  top: 92px;
+  z-index: 0;
+}
+#charaDetail.character16 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg03.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 540px !important;
+  top: 424px !important;
+}
+#charaDetail.character16 #boxSkill dl.weapon {
+  position: absolute;
+  left: 48px;
+  top: 30px;
+  z-index: 0;
+}
+#charaDetail.character16 #boxSkill dl.type {
+  position: absolute;
+  left: 48px;
+  top: 52px;
+  z-index: 0;
+}
+#charaDetail.character16 #boxSkill .info {
+  position: absolute;
+  left: 48px;
+  top: 80px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character16 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 50px;
+  top: 120px;
+  z-index: 0;
+}
+#charaDetail.character16 .btnShadow {
+  left: 258px;
+  top: 600px;
+}
+#charaDetail.character16 #charaName {
+  position: absolute;
+  left: 500px;
+  top: 77px;
+  z-index: 2;
+}
+#charaDetail.character16 #personaImg {
+  left: -57px !important;
+  top: -60px !important;
+}
+#charaDetail.character16 #charaImg {
+  left: 50px !important;
+  top: -96px !important;
+}
+#charaDetail.character16.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character16.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg04.png) 0 0 no-repeat;
+}
+#charaDetail.character17 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character17 #boxCV {
+  width: 352px;
+  height: 213px;
+  left: 387px !important;
+  top: 254px !important;
+}
+#charaDetail.character17 #boxCV dl.cv {
+  position: absolute;
+  left: 44px;
+  top: 37px;
+  z-index: 0;
+}
+#charaDetail.character17 #boxCV dl.voice {
+  position: absolute;
+  left: 44px;
+  top: 63px;
+  z-index: 0;
+}
+#charaDetail.character17 #boxCV .info {
+  position: absolute;
+  left: 44px;
+  top: 92px;
+  z-index: 0;
+}
+#charaDetail.character17 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg03.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 416px !important;
+  top: 415px !important;
+}
+#charaDetail.character17 #boxSkill dl.weapon {
+  position: absolute;
+  left: 48px;
+  top: 30px;
+  z-index: 0;
+}
+#charaDetail.character17 #boxSkill dl.type {
+  position: absolute;
+  left: 48px;
+  top: 52px;
+  z-index: 0;
+}
+#charaDetail.character17 #boxSkill .info {
+  position: absolute;
+  left: 48px;
+  top: 80px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character17 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 50px;
+  top: 120px;
+  z-index: 0;
+}
+#charaDetail.character17 .btnShadow {
+  left: 258px;
+  top: 600px;
+}
+#charaDetail.character17 #charaName {
+  position: absolute;
+  left: 337px;
+  top: 75px;
+  z-index: 2;
+}
+#charaDetail.character17 #personaImg {
+  left: 444px !important;
+  top: 222px !important;
+  z-index: 1;
+}
+#charaDetail.character17 #charaImg {
+  left: 0px !important;
+  top: -64px !important;
+  z-index: 0;
+}
+#charaDetail.character17.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character17.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg04.png) 0 0 no-repeat;
+}
+#charaDetail.character18 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character18 #boxCV {
+  width: 352px;
+  height: 213px;
+  left: 289px !important;
+  top: 266px !important;
+}
+#charaDetail.character18 #boxCV dl.cv {
+  position: absolute;
+  left: 44px;
+  top: 35px;
+  z-index: 0;
+}
+#charaDetail.character18 #boxCV dl.voice {
+  position: absolute;
+  left: 44px;
+  top: 61px;
+  z-index: 0;
+}
+#charaDetail.character18 #boxCV .info {
+  position: absolute;
+  left: 44px;
+  top: 90px;
+  z-index: 0;
+}
+#charaDetail.character18.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01.png) 0 0 no-repeat !important;
+  width: 352px;
+  height: 213px;
+}
+#charaDetail.character18.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg03.png) 0 0 no-repeat !important;
+}
+#charaDetail.character18 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg03.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 303px !important;
+  top: 425px !important;
+}
+#charaDetail.character18 #boxSkill dl.weapon {
+  position: absolute;
+  left: 48px;
+  top: 30px;
+  z-index: 0;
+}
+#charaDetail.character18 #boxSkill dl.type {
+  position: absolute;
+  left: 48px;
+  top: 52px;
+  z-index: 0;
+}
+#charaDetail.character18 #boxSkill .info {
+  position: absolute;
+  left: 48px;
+  top: 80px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character18 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 50px;
+  top: 133px;
+  z-index: 0;
+}
+#charaDetail.character18 .btnShadow {
+  left: 258px;
+  top: 600px;
+}
+#charaDetail.character18 #charaName {
+  position: absolute;
+  left: 173px;
+  top: 83px;
+  z-index: 2;
+}
+#charaDetail.character18 #personaImg {
+  left: -198px !important;
+  top: -27px !important;
+}
+#charaDetail.character18 #charaImg {
+  left: 473px !important;
+  top: 28px !important;
+}
+#charaDetail.character18.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character18.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg04.png) 0 0 no-repeat;
+}
+#charaDetail.character19 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character19 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara13.png) 0 0 no-repeat !important;
+  width: 359px;
+  height: 239px;
+  left: 289px !important;
+  top: 219px !important;
+}
+#charaDetail.character19 #boxCV dl.cv {
+  position: absolute;
+  left: 44px;
+  top: 41px;
+  z-index: 0;
+}
+#charaDetail.character19 #boxCV dl.voice {
+  position: absolute;
+  left: 44px;
+  top: 65px;
+  z-index: 0;
+}
+#charaDetail.character19 #boxCV .info {
+  position: absolute;
+  left: 44px;
+  top: 96px;
+  z-index: 0;
+}
+#charaDetail.character19.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara19.png) 0 0 no-repeat !important;
+}
+#charaDetail.character19.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg02_chara19.png) 0 0 no-repeat !important;
+}
+#charaDetail.character19 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg02_chara19.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 304px !important;
+  top: 419px !important;
+}
+#charaDetail.character19 #boxSkill dl.weapon {
+  position: absolute;
+  left: 55px;
+  top: 30px;
+  z-index: 0;
+}
+#charaDetail.character19 #boxSkill dl.type {
+  position: absolute;
+  left: 55px;
+  top: 51px;
+  z-index: 0;
+}
+#charaDetail.character19 #boxSkill .info {
+  position: absolute;
+  left: 56px;
+  top: 79px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character19 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 56px;
+  top: 136px;
+  z-index: 0;
+}
+#charaDetail.character19 .btnShadow {
+  left: 268px;
+  top: 589px;
+}
+#charaDetail.character19 #charaName {
+  position: absolute;
+  left: -80px;
+  top: 30px;
+  z-index: 2;
+}
+#charaDetail.character19 #personaImg {
+  left: 0px !important;
+  top: 227px !important;
+}
+#charaDetail.character19 #charaImg {
+  left: 310px !important;
+  top: -138px !important;
+}
+#charaDetail.character19.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character19.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg04.png) 0 0 no-repeat;
+}
+#charaDetail.character20 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character20 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara20.png) 0 0 no-repeat !important;
+  width: 360px;
+  height: 243px;
+  left: 252px !important;
+  top: 273px !important;
+}
+#charaDetail.character20 #boxCV dl.cv {
+  position: absolute;
+  left: 44px;
+  top: 41px;
+  z-index: 0;
+}
+#charaDetail.character20 #boxCV dl.voice {
+  position: absolute;
+  left: 44px;
+  top: 65px;
+  z-index: 0;
+}
+#charaDetail.character20 #boxCV .info {
+  position: absolute;
+  left: 44px;
+  top: 96px;
+  z-index: 0;
+}
+#charaDetail.character20.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara19.png) 0 0 no-repeat !important;
+}
+#charaDetail.character20.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg02_chara19.png) 0 0 no-repeat !important;
+}
+#charaDetail.character20 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg02_chara19.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 286px !important;
+  top: 477px !important;
+}
+#charaDetail.character20 #boxSkill dl.weapon {
+  position: absolute;
+  left: 55px;
+  top: 30px;
+  z-index: 0;
+}
+#charaDetail.character20 #boxSkill dl.type {
+  position: absolute;
+  left: 55px;
+  top: 51px;
+  z-index: 0;
+}
+#charaDetail.character20 #boxSkill .info {
+  position: absolute;
+  left: 56px;
+  top: 79px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character20 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 56px;
+  top: 136px;
+  z-index: 0;
+}
+#charaDetail.character20 .btnShadow {
+  left: 268px;
+  top: 589px;
+}
+#charaDetail.character20 #charaName {
+  position: absolute;
+  left: 219px;
+  top: 75px;
+  z-index: 2;
+}
+#charaDetail.character20 #personaImg {
+  left: -363px !important;
+  top: 16px !important;
+}
+#charaDetail.character20 #charaImg {
+  left: 541px !important;
+  top: 45px !important;
+}
+#charaDetail.character20.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character20.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg04.png) 0 0 no-repeat;
+}
+#charaDetail.character21 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character21 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara20.png) 0 0 no-repeat !important;
+  width: 360px;
+  height: 243px;
+  left: 279px !important;
+  top: 266px !important;
+}
+#charaDetail.character21 #boxCV dl.cv {
+  position: absolute;
+  left: 44px;
+  top: 41px;
+  z-index: 0;
+}
+#charaDetail.character21 #boxCV dl.voice {
+  position: absolute;
+  left: 44px;
+  top: 65px;
+  z-index: 0;
+}
+#charaDetail.character21 #boxCV .info {
+  position: absolute;
+  left: 44px;
+  top: 96px;
+  z-index: 0;
+}
+#charaDetail.character21.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara19.png) 0 0 no-repeat !important;
+}
+#charaDetail.character21.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg02_chara19.png) 0 0 no-repeat !important;
+}
+#charaDetail.character21 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg02_chara19.png) 0 0 no-repeat;
+  width: 348px;
+  height: 206px;
+  left: 293px !important;
+  top: 468px !important;
+}
+#charaDetail.character21 #boxSkill dl.weapon {
+  position: absolute;
+  left: 55px;
+  top: 30px;
+  z-index: 0;
+}
+#charaDetail.character21 #boxSkill dl.type {
+  position: absolute;
+  left: 55px;
+  top: 51px;
+  z-index: 0;
+}
+#charaDetail.character21 #boxSkill .info {
+  position: absolute;
+  left: 56px;
+  top: 79px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 250px;
+}
+#charaDetail.character21 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 56px;
+  top: 145px;
+  z-index: 0;
+}
+#charaDetail.character21 .btnShadow {
+  left: 268px;
+  top: 589px;
+}
+#charaDetail.character21 #charaName {
+  position: absolute;
+  left: 171px;
+  top: 84px;
+  z-index: 2;
+}
+#charaDetail.character21 #personaImg {
+  left: -408px !important;
+  top: -11px !important;
+}
+#charaDetail.character21 #charaImg {
+  left: 524px !important;
+  top: 45px !important;
+}
+#charaDetail.character21.sdw #boxCV {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg01_chara04.png) 0 0 no-repeat;
+}
+#charaDetail.character21.sdw #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_sdw_bg04.png) 0 0 no-repeat;
+}
+#charaDetail.character22 .btnMovie {
+  margin-left: -50px;
+  z-index: 1;
+}
+#charaDetail.character22 #boxCV {
+  background: url(/p4u2/cdn/img/character/box_bg01_chara22.png) 0 0 no-repeat !important;
+  width: 502px;
+  height: 205px;
+  left: 258px !important;
+  top: 524px !important;
+}
+#charaDetail.character22 #boxCV dl.cv {
+  position: absolute;
+  left: 44px;
+  top: 50px;
+  z-index: 0;
+}
+#charaDetail.character22 #boxCV dl.voice {
+  position: absolute;
+  left: 44px;
+  top: 74px;
+  z-index: 0;
+}
+#charaDetail.character22 #boxCV .info {
+  width: 385px;
+  position: absolute;
+  left: 44px;
+  top: 105px;
+  z-index: 0;
+}
+#charaDetail.character22 #boxSkill {
+  background: url(/p4u2/cdn/img/character/box_bg02_chara22.png) 0 0 no-repeat;
+  width: 385px;
+  height: 194px;
+  left: 694px !important;
+  top: 535px !important;
+}
+#charaDetail.character22 #boxSkill dl.weapon {
+  position: absolute;
+  left: 50px;
+  top: 35px;
+  z-index: 0;
+}
+#charaDetail.character22 #boxSkill dl.type {
+  position: absolute;
+  left: 50px;
+  top: 56px;
+  z-index: 0;
+}
+#charaDetail.character22 #boxSkill .info {
+  position: absolute;
+  left: 50px;
+  top: 84px;
+  z-index: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  width: 165px;
+}
+#charaDetail.character22 #boxSkill .btnCmnd {
+  position: absolute;
+  left: 51px;
+  top: 145px;
+  z-index: 0;
+}
+#charaDetail.character22 #charaName {
+  position: absolute;
+  left: 124px;
+  top: 377px;
+  z-index: 2;
+}
+#charaDetail.character22 #personaImg {
+  left: -90px !important;
+  top: 5px !important;
+}
+#charaDetail.character22 #charaImg {
+  left: 360px !important;
+  top: -9px !important;
+}
+#charaDetail .command-wrap {
+  display: none;
+  text-align: center;
+}
+#charaDetail .command-wrap .btnDownload {
+  width: 212px;
+  height: 86px !important;
+  margin: 0 auto;
+  padding: 0 !important;
+}
+#charaDetail .command-wrap .btnDownload a {
+  display: block;
+  height: 86px !important;
+}
+#charaDetail .command-wrap .btnDownload img {
+  vertical-align: top;
+}
+#charaDetail .prev, #charaDetail .next {
+  position: fixed;
+  top: 40%;
+  z-index: 10;
+}
+#charaDetail .prev {
+  left: 22px;
+}
+#charaDetail .next {
+  right: 22px;
+}
+#charaDetail .charaThumbWrap {
+  position: fixed;
+  left: 50%;
+  bottom: 250px;
+  z-index: 10;
+  margin-left: -430px;
+  width: 960px;
+  height: 52px;
+}
+#charaDetail .charaThumbWrap .btnLeft {
+  position: absolute;
+  left: -44px;
+  top: 10px;
+  z-index: 10;
+}
+#charaDetail .charaThumbWrap .btnRight {
+  position: absolute;
+  left: 884px;
+  top: 10px;
+  z-index: 10;
+}
+#charaDetail .charaThumbWrap .btn {
+  position: absolute;
+  left: 0px;
+  top: 740px;
+  z-index: 10;
+}
+#charaDetail .charaThumb {
+  display: none;
+}
+#charaDetail .charaThumb li {
+  float: left;
+  margin-left: -12px;
+  width: 66px;
+  height: 52px;
+}
+#charaDetail .charaThumb li .current {
+  visibility: hidden;
+}
+#charaDetail .charaThumb li.character01 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara01_on.png);
+}
+#charaDetail .charaThumb li.character02 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara02_on.png);
+}
+#charaDetail .charaThumb li.character03 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara03_on.png);
+}
+#charaDetail .charaThumb li.character04 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara04_on.png);
+}
+#charaDetail .charaThumb li.character05 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara05_on.png);
+}
+#charaDetail .charaThumb li.character06 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara06_on.png);
+}
+#charaDetail .charaThumb li.character07 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara07_on.png);
+}
+#charaDetail .charaThumb li.character08 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara08_on.png);
+}
+#charaDetail .charaThumb li.character09 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara09_on.png);
+}
+#charaDetail .charaThumb li.character10 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara10_on.png);
+}
+#charaDetail .charaThumb li.character11 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara11_on.png);
+}
+#charaDetail .charaThumb li.character12 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara12_on.png);
+}
+#charaDetail .charaThumb li.character13 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara13_on.png);
+}
+#charaDetail .charaThumb li.character14 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara14_on.png);
+}
+#charaDetail .charaThumb li.character15 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara15_on.png);
+}
+#charaDetail .charaThumb li.character16 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara16_on.png);
+}
+#charaDetail .charaThumb li.character17 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara17_on.png);
+}
+#charaDetail .charaThumb li.character18 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara18_on.png);
+}
+#charaDetail .charaThumb li.character19 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara19_on.png);
+}
+#charaDetail .charaThumb li.character20 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara20_on.png);
+}
+#charaDetail .charaThumb li.character21 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara21_on.png);
+}
+#charaDetail .charaThumb li.character22 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara22_on.png);
+}
+#charaDetail .charaThumb li.character23 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara23_on.png);
+}
+#charaDetail .charaThumb li.character24 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara24_on.png);
+}
+#charaDetail .charaThumb li.character25 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara25_on.png);
+}
+#charaDetail .charaThumb li.character26 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara26_on.png);
+}
+#charaDetail .charaThumb li.character27 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara27_on.png);
+}
+#charaDetail .charaThumb li.character28 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara28_on.png);
+}
+#charaDetail .charaThumb li.character29 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara29_on.png);
+}
+#charaDetail .charaThumb li.character30 {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara30_on.png);
+}
+#charaDetail .charaThumb li.character01_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara01sdw_on.png);
+}
+#charaDetail .charaThumb li.character02_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara02sdw_on.png);
+}
+#charaDetail .charaThumb li.character03_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara03sdw_on.png);
+}
+#charaDetail .charaThumb li.character04_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara04sdw_on.png);
+}
+#charaDetail .charaThumb li.character05_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara05sdw_on.png);
+}
+#charaDetail .charaThumb li.character06_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara06sdw_on.png);
+}
+#charaDetail .charaThumb li.character07_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara07sdw_on.png);
+}
+#charaDetail .charaThumb li.character08_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara08sdw_on.png);
+}
+#charaDetail .charaThumb li.character09_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara09sdw_on.png);
+}
+#charaDetail .charaThumb li.character10_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara10sdw_on.png);
+}
+#charaDetail .charaThumb li.character11_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara11sdw_on.png);
+}
+#charaDetail .charaThumb li.character12_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara12sdw_on.png);
+}
+#charaDetail .charaThumb li.character13_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara13sdw_on.png);
+}
+#charaDetail .charaThumb li.character14_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara14sdw_on.png);
+}
+#charaDetail .charaThumb li.character15_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara15sdw_on.png);
+}
+#charaDetail .charaThumb li.character16_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara16sdw_on.png);
+}
+#charaDetail .charaThumb li.character17_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara17sdw_on.png);
+}
+#charaDetail .charaThumb li.character18_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara18sdw_on.png);
+}
+#charaDetail .charaThumb li.character19_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara19sdw_on.png);
+}
+#charaDetail .charaThumb li.character20_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara20sdw_on.png);
+}
+#charaDetail .charaThumb li.character21_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara21sdw_on.png);
+}
+#charaDetail .charaThumb li.character22_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara22sdw_on.png);
+}
+#charaDetail .charaThumb li.character23_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara23sdw_on.png);
+}
+#charaDetail .charaThumb li.character24_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara24sdw_on.png);
+}
+#charaDetail .charaThumb li.character25_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara25sdw_on.png);
+}
+#charaDetail .charaThumb li.character26_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara26sdw_on.png);
+}
+#charaDetail .charaThumb li.character27_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara27sdw_on.png);
+}
+#charaDetail .charaThumb li.character28_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara28sdw_on.png);
+}
+#charaDetail .charaThumb li.character29_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara29sdw_on.png);
+}
+#charaDetail .charaThumb li.character30_shadow {
+  background-image: url(/p4u2/cdn/img/character/btn_thumb_chara30sdw_on.png);
+}
+#charaDetail .charaThumb.start {
+  display: block;
+}
+#charaDetail .minimum #container .inner,
+#charaDetail .fixedMinimum #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -400px 0 0 -490px;
+}
+#charaDetail .minimum .btnMovie,
+#charaDetail .fixedMinimum .btnMovie {
+  bottom: 160px;
+}
+#charaDetail .minimum .charaThumbWrap,
+#charaDetail .fixedMinimum .charaThumbWrap {
+  bottom: 100px;
+}
+
+/* -------------------------------------------------- 非表示要素 */
+/* =====================================================================================
+  MODE
+
+  update: 14/05/21
+				
+				@include size(0,0);
+				@include absolute(0,0,0);
+				@include fixed(0,0,0);
+				@extend .clearfix;
+
+====================================================================================== */
+#modeTop {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+}
+#modeTop #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+}
+#modeTop #pageTitle {
+  margin: 20px auto 30px;
+}
+#modeTop #modeList {
+  display: table;
+  margin: 0 auto;
+}
+#modeTop #modeList li {
+  position: relative;
+  float: left;
+  padding-right: 14px;
+  padding-bottom: 14px;
+}
+#modeTop #modeList li:nth-child(even) {
+  padding-right: 0;
+}
+#modeTop #modeList li.new:after {
+  content: '';
+  background: url(/p4u2/cdn/img/mode/top/ico_new.png) 0 0 no-repeat;
+  width: 93px;
+  height: 60px;
+  opacity: 1;
+  position: absolute;
+  left: 0px;
+  top: -17px;
+  z-index: 1;
+}
+#modeTop #modeList li.movie:after {
+  content: '';
+  background: url(/p4u2/cdn/img/mode/top/ico_movie.png) 0 0 no-repeat;
+  width: 93px;
+  height: 60px;
+  opacity: 1;
+  position: absolute;
+  left: 0px;
+  top: -17px;
+  z-index: 1;
+}
+#modeTop #modeList li.newmode:after {
+  content: '';
+  background: url(/p4u2/cdn/img/mode/top/ico_newmode.png) 0 0 no-repeat;
+  width: 71px;
+  height: 77px;
+  opacity: 1;
+  position: absolute;
+  left: -20px;
+  top: -26px;
+  z-index: 1;
+}
+#modeTop #modeList .blank {
+  background: url(/p4u2/cdn/img/mode/top/btn_mode_blank.png) 0 0 no-repeat;
+  width: 476px;
+  height: 170px;
+}
+
+#modeGa,
+#modeLobby {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+  /* -------------------------------------------------- RETURNボタン */
+}
+#modeGa #container .inner,
+#modeLobby #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+  padding-top: 285px;
+  padding-bottom: 260px;
+}
+#modeGa .fixedMinimum #container .inner,
+#modeLobby .fixedMinimum #container .inner {
+  margin: -280px 0 0 -490px;
+}
+#modeGa .minimum #container .inner,
+#modeLobby .minimum #container .inner {
+  margin: -280px 0 0 -490px;
+}
+#modeGa .btnMovie,
+#modeLobby .btnMovie {
+  position: absolute;
+  top: -20px;
+  left: 630px;
+}
+#modeGa #gaInfoList,
+#modeLobby #gaInfoList {
+  margin: 0 auto;
+}
+#modeGa #gaInfoList li,
+#modeLobby #gaInfoList li {
+  margin-bottom: 10px;
+}
+#modeGa #gaInfoList .blank,
+#modeLobby #gaInfoList .blank {
+  background: url(/p4u2/cdn/img/mode/ga/btn_mode_blank.png) 0 0 no-repeat;
+  width: 476px;
+  height: 170px;
+}
+#modeGa .btnReturn,
+#modeLobby .btnReturn {
+  text-align: center;
+  margin-top: 10px;
+}
+#modeGa .btnReturn a,
+#modeLobby .btnReturn a {
+  display: inline-block !important;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+#modeGa #pageTitle {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+}
+
+#modeLobby #pageTitle {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+#modeBattle,
+#modePractice,
+#modeOption {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+  /* -------------------------------------------------- RETURNボタン */
+}
+#modeBattle #container .inner,
+#modePractice #container .inner,
+#modeOption #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -540px 0 0 -490px;
+  padding-top: 285px;
+  padding-bottom: 260px;
+}
+#modeBattle .fixedMinimum #container .inner,
+#modePractice .fixedMinimum #container .inner,
+#modeOption .fixedMinimum #container .inner {
+  margin: -400px 0 0 -490px;
+}
+#modeBattle .minimum #container .inner,
+#modePractice .minimum #container .inner,
+#modeOption .minimum #container .inner {
+  margin: -450px 0 0 -490px;
+}
+#modeBattle #pageTitle,
+#modePractice #pageTitle,
+#modeOption #pageTitle {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+}
+#modeBattle .btnMovie,
+#modePractice .btnMovie,
+#modeOption .btnMovie {
+  position: absolute;
+  top: -20px;
+  left: 630px;
+}
+#modeBattle #modeInfoList,
+#modePractice #modeInfoList,
+#modeOption #modeInfoList {
+  margin: 0 auto;
+}
+#modeBattle #modeInfoList li,
+#modePractice #modeInfoList li,
+#modeOption #modeInfoList li {
+  margin-bottom: 10px;
+}
+#modeBattle .btnReturn,
+#modePractice .btnReturn,
+#modeOption .btnReturn {
+  text-align: center;
+  margin-top: 10px;
+}
+#modeBattle .btnReturn a,
+#modePractice .btnReturn a,
+#modeOption .btnReturn a {
+  display: inline-block !important;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+/* =====================================================================================
+  GUIDE
+
+  update: 14/04/20
+				
+				@include size(0,0);
+				@include absolute(0,0,0);
+				@include fixed(0,0,0);
+				@extend .clearfix;
+
+====================================================================================== */
+/* =====================================================================================
+  SPECIAL
+
+  update: 14/04/20
+				
+				@include size(0,0);
+				@include absolute(0,0,0);
+				@include fixed(0,0,0);
+				@extend .clearfix;
+
+====================================================================================== */
+#specialTop {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+  /* -------------------------------------------------- サムネイルのソートボタン */
+  /* -------------------------------------------------- サムネイルリスト */
+}
+#specialTop #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+}
+#specialTop #pageTitle {
+  margin: -17px auto 0;
+}
+#specialTop .specialNav {
+  overflow: hidden;
+  width: 872px;
+  margin: 0 auto;
+}
+#specialTop .specialNav li {
+  position: relative;
+  float: left;
+  margin: 0 11px 12px 0;
+}
+#specialTop .specialNav li:nth-child(4n) {
+  margin-right: 0;
+}
+#specialTop .thumbList {
+  width: 872px;
+  margin: 0 auto;
+  text-align: left;
+}
+#specialTop .thumbList li {
+  position: relative;
+  float: left;
+  margin: 0 7px 6px 0;
+  width: 210px;
+  height: 162px;
+}
+#specialTop .thumbList li.new a:after {
+  content: '';
+  background: url(/p4u2/cdn/img/special/icon_new.png) 0 0 no-repeat;
+  width: 86px;
+  height: 51px;
+  opacity: 1;
+  position: absolute;
+  left: -4px;
+  top: -12px;
+  z-index: 1;
+}
+#specialTop .thumbList .blank {
+  background: url(/p4u2/cdn/img/special/thumb_blank.png) 0 0 no-repeat;
+}
+#specialTop .prev, #specialTop .next {
+  position: fixed;
+  top: 40%;
+  z-index: 10;
+}
+#specialTop .prev {
+  left: 22px;
+}
+#specialTop .next {
+  right: 22px;
+}
+
+/* -------------------------------------------------- ムービーページ ここから */
+#specialMovie {
+  /* -------------------------------------------------- ウィンドウサイズが小さい場合 */
+  /* -------------------------------------------------- 鉄柱 */
+  /* -------------------------------------------------- ページタイトル */
+  /* -------------------------------------------------- ムービー再生ボタン */
+  /* -------------------------------------------------- RETURNボタン */
+}
+#specialMovie #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+}
+#specialMovie .minimum #container .inner,
+#specialMovie .fixedMinimum #container .inner {
+  margin: -350px 0 0 -490px;
+}
+#specialMovie .barBg {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 0;
+  background: url(/p4u2/cdn/img/special/bg_bar.png) 0 0 repeat-y;
+  width: 845px;
+  min-height: 600px;
+  margin-left: -422px;
+}
+#specialMovie #pageTitle {
+  margin: 0 auto 0;
+}
+#specialMovie #pageTitle img {
+  margin-right: 110px;
+}
+#specialMovie .btnPlayMovie {
+  text-align: center;
+}
+#specialMovie .btnPlayMovie a {
+  background: url(/p4u2/cdn/img/special/btn_bg_movie.png) 0 0 no-repeat;
+  width: 485px;
+  height: 313px;
+  display: inline-block !important;
+  margin: 0 auto;
+}
+#specialMovie .btnReturn {
+  text-align: center;
+}
+#specialMovie .btnReturn a {
+  display: inline-block !important;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+/* -------------------------------------------------- ツイッターページ ここから */
+#specialTw {
+  /* -------------------------------------------------- ウィンドウサイズが小さい場合 */
+  /* -------------------------------------------------- ページタイトル */
+  /* -------------------------------------------------- ダウンロードボタン */
+  /* -------------------------------------------------- RETURNボタン */
+}
+#specialTw #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+  padding-bottom: 260px;
+}
+#specialTw .minimum #container .inner,
+#specialTw .fixedMinimum #container .inner {
+  margin: -360px 0 0 -490px;
+}
+#specialTw #pageTitle {
+  margin: 0 auto 10px;
+}
+#specialTw .iconList {
+  display: table;
+  margin: 0 auto;
+}
+#specialTw .iconList li {
+  float: left;
+  margin-right: 7px;
+  margin-bottom: 7px;
+}
+#specialTw .iconList {
+  display: table;
+  margin: 40px auto 0;
+  display: table;
+}
+#specialTw .iconList li {
+  position: relative;
+  float: left;
+  margin-right: 7px;
+  margin-bottom: 7px;
+}
+#specialTw .iconList li.new:after {
+  content: '';
+  background: url(/p4u2/cdn/img/special/icon_tw_new.png) 0 0 no-repeat;
+  width: 80px;
+  height: 48px;
+  opacity: 1;
+  position: absolute;
+  left: -4px;
+  top: -12px;
+  z-index: 1;
+}
+#specialTw.twitter02 .iconList {
+  width: 750px;
+}
+#specialTw .btnDownload {
+  text-align: center;
+  margin-bottom: -10px !important;
+  width: 212px;
+  display: inline-block;
+}
+#specialTw .btnDownload a {
+  display: inline-block !important;
+}
+#specialTw .btnReturn {
+  text-align: center;
+  margin-top: 10px;
+  width: 234px;
+  display: inline-block;
+}
+#specialTw .btnReturn a {
+  display: inline-block !important;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+#specialPackage01 {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+  /* -------------------------------------------------- RETURNボタン */
+}
+#specialPackage01 #container .inner {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+  padding-bottom: 280px;
+}
+#specialPackage01 #pageTitle {
+  margin: -17px auto 0;
+}
+#specialPackage01 .btnReturn {
+  text-align: center;
+}
+#specialPackage01 .btnReturn a {
+  display: inline-block !important;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+#specialPackage01 .btnReturn img {
+  margin-left: 20px;
+}
+#specialPackage01 .block {
+  position: relative;
+}
+#specialPackage01 .block h2.ttl {
+  z-index: 0;
+}
+#specialPackage01 #contentsHead {
+  text-align: center;
+}
+#specialPackage01 #aboutPackage {
+  display: table;
+  margin: 40px auto 0;
+  position: relative;
+  left: -8px;
+}
+#specialPackage01 #aboutPackage .ttl {
+  display: table-cell;
+  padding-right: 15px;
+}
+#specialPackage01 #aboutPackage .text {
+  display: table-cell;
+}
+#specialPackage01 #appearance {
+  text-align: left;
+  width: 860px;
+  margin: 90px auto 90px;
+}
+#specialPackage01 #appearance h2.ttl {
+  text-align: center;
+}
+#specialPackage01 #appearance h3.ttl {
+  margin: 10px 0 0 56px;
+}
+#specialPackage01 #appearance .text {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 15px 0 0 56px;
+}
+#specialPackage01 #appearance .visual {
+  position: absolute;
+  top: -20px;
+  left: 592px;
+}
+#specialPackage01 #dlcCard {
+  text-align: left;
+  width: 860px;
+  margin: 90px auto 0px;
+}
+#specialPackage01 #dlcCard .dlc {
+  position: relative;
+  width: 100%;
+}
+#specialPackage01 #dlcCard .dlc .icon {
+  float: left;
+  margin: 0 15px 0 0;
+}
+#specialPackage01 #dlcCard .dlc .right {
+  float: left;
+}
+#specialPackage01 #dlcCard .dlc .text {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px 0 0 2px;
+  letter-spacing: -1px;
+}
+#specialPackage01 #dlcCard #dlc01 {
+  margin: -30px 0 0;
+}
+#specialPackage01 #dlcCard #dlc01 .ttl {
+  margin: 65px 0 0;
+}
+#specialPackage01 #dlcCard #dlc01 .icon {
+  margin-left: -16px;
+}
+#specialPackage01 #dlcCard #dlc01 .visual {
+  position: absolute;
+  top: -18px;
+  left: 612px;
+}
+#specialPackage01 #dlcCard #dlc02 {
+  margin: 0px 0 12px;
+}
+#specialPackage01 #dlcCard #dlc02 .ttl {
+  margin: 18px 0 0;
+}
+#specialPackage01 #dlcCard #dlc02 .icon {
+  margin-left: 18px;
+}
+#specialPackage01 #dlcCard #dlc02 .visual {
+  position: absolute;
+  top: 20px;
+  left: 569px;
+}
+#specialPackage01 #dlcCard #dlc03 {
+  margin: 0px 0 40px;
+}
+#specialPackage01 #dlcCard #dlc03 .ttl {
+  margin: 2px 0 0;
+}
+#specialPackage01 #dlcCard #dlc03 .icon {
+  margin-left: 10px;
+}
+#specialPackage01 #dlcCard #dlc03 .text {
+  margin-bottom: 20px;
+}
+#specialPackage01 #dlcCard #dlc03 .icon {
+  height: 200px;
+}
+#specialPackage01 #dlcCard #dlc03 .visual {
+  width: 665px;
+  height: 332px;
+  margin-left: 188px;
+  position: relative;
+  clear: both;
+  background: url(/p4u2/cdn/img/special/package01/dlc03_bg.png) 0 0 no-repeat;
+}
+#specialPackage01 #dlcCard #dlc03 .visual .jkt1 {
+  position: absolute;
+  left: 28px;
+  top: 54px;
+  z-index: 0;
+}
+#specialPackage01 #dlcCard #dlc03 .visual .songs1 {
+  position: absolute;
+  left: 164px;
+  top: 54px;
+  z-index: 0;
+}
+#specialPackage01 #dlcCard #dlc03 .visual .jkt2 {
+  position: absolute;
+  left: 28px;
+  top: 186px;
+  z-index: 0;
+}
+#specialPackage01 #dlcCard #dlc03 .visual .songs2 {
+  position: absolute;
+  left: 164px;
+  top: 186px;
+  z-index: 0;
+}
+#specialPackage01 #dlcCard #dlc03 .visual .jkt3 {
+  position: absolute;
+  left: 342px;
+  top: 54px;
+  z-index: 0;
+}
+#specialPackage01 #dlcCard #dlc03 .visual .songs3 {
+  position: absolute;
+  left: 479px;
+  top: 54px;
+  z-index: 0;
+}
+#specialPackage01 #dlcCard #dlc03 .visual .song-list p {
+  margin-bottom: 8px;
+}
+#specialPackage01 #dlcCard #dlc03 .visual .song-list img {
+  vertical-align: top;
+}
+#specialPackage01 #dlcCard #dlc03 .visual .song-list li {
+  cursor: pointer;
+}
+#specialPackage01 #dlcCard #dlc04 {
+  margin: 0px 0 0px;
+}
+#specialPackage01 #dlcCard #dlc04 .ttl {
+  margin: 15px 0 26px;
+}
+#specialPackage01 #dlcCard #dlc04 .icon {
+  margin-left: 20px;
+}
+#specialPackage01 #dlcCard #dlc04 dt {
+  margin: 0 0 10px;
+}
+#specialPackage01 #dlcCard #dlc04 dd {
+  margin: 0 0 20px;
+  padding-left: 36px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  width: 270px;
+}
+#specialPackage01 #dlcCard #dlc04 dd span {
+  font-size: 9px;
+  display: block;
+}
+#specialPackage01 #dlcCard #dlc04 .visual {
+  position: absolute;
+  top: 0px;
+  left: 497px;
+}
+#specialPackage01 #dlcCard #dlc04 .note {
+  margin: 0 auto 10px;
+  padding: 10px 0 0;
+  padding-left: 16px;
+  font-size: 9px;
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: -1px;
+  clear: both;
+  display: table;
+}
+#specialPackage01 #dlcCard #dlc04 .price {
+  font-size: 14px;
+  text-align: center;
+  line-height: 16px;
+  clear: both;
+  padding-top: 20px;
+  text-indent: 24px;
+}
+
+.dlc:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0.1px;
+  font-size: 0.1em;
+  line-height: 0;
+  clear: both;
+}
+
+/* IE7pfloat */
+.dlc {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .dlc {
+  height: 1%;
+}
+
+#specialDlcCard01 {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /*
+  #container .inner{
+  	color: #fff;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	margin: -480px 0 0 -490px;
+  	padding-bottom: 280px;
+  }
+  */
+  /* -------------------------------------------------- ページタイトル */
+  /* IE7pfloat */
+  /* Hides from IE-mac \*/
+  /* -------------------------------------------------- RETURNボタン */
+}
+#specialDlcCard01 #pageTitle {
+  margin: -67px auto 0;
+}
+#specialDlcCard01 #contentsHead {
+  margin: -50px auto 0;
+}
+#specialDlcCard01 #vslList {
+  width: 860px;
+  margin: 0 auto;
+  padding: 10px 0 30px;
+}
+#specialDlcCard01 #vslList .text02 {
+  margin-bottom: 15px;
+}
+#specialDlcCard01 #vslList li {
+  float: left;
+  display: inline;
+  margin-right: 4px;
+}
+#specialDlcCard01 #vslList:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0.1px;
+  font-size: 0.1em;
+  line-height: 0;
+  clear: both;
+}
+#specialDlcCard01 #vslList {
+  display: inline-block;
+}
+#specialDlcCard01 * html #vslList {
+  height: 1%;
+}
+#specialDlcCard01 #detailText {
+  width: 860px;
+  margin: 0 auto;
+}
+#specialDlcCard01 #detailText .adachi-vsl {
+  height: 925px;
+  position: relative;
+}
+#specialDlcCard01 #detailText .adachi-vsl img {
+  position: absolute;
+  left: 50%;
+  margin-left: -542px;
+}
+#specialDlcCard01 #detailText .text03 {
+  padding-top: 10px;
+}
+#specialDlcCard01 .btnReturn {
+  text-align: center;
+  margin-bottom: 250px;
+}
+#specialDlcCard01 .btnReturn a {
+  display: inline-block !important;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#specialDlcCard01 .btnReturn img {
+  margin-left: 20px;
+}
+#specialDlcCard01 .block {
+  position: relative;
+}
+#specialDlcCard01 .block h2.ttl {
+  z-index: 0;
+}
+#specialDlcCard01 #contentsHead {
+  text-align: center;
+}
+
+#specialPackageVisual {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+  /* -------------------------------------------------- RETURNボタン */
+}
+#specialPackageVisual #container .inner {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+  padding-bottom: 280px;
+}
+#specialPackageVisual #pageTitle {
+  margin: -17px auto 0;
+}
+#specialPackageVisual .btnReturn {
+  text-align: center;
+}
+#specialPackageVisual .btnReturn a {
+  display: inline-block !important;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+#specialPackageVisual .btnReturn img {
+  margin-left: 20px;
+}
+#specialPackageVisual .block {
+  position: relative;
+}
+#specialPackageVisual .block h2.ttl {
+  z-index: 0;
+}
+#specialPackageVisual #contentsHead {
+  text-align: center;
+  margin-top: -60px;
+}
+#specialPackageVisual #visual {
+  margin-top: -45px;
+}
+
+/* カウントダウンボイス */
+#specialCountdown {
+  /* -------------------------------------------------- ページタイトル */
+  /* -------------------------------------------------- RETURNボタン */
+}
+#specialCountdown #pageTitle {
+  margin: -67px auto 100px auto;
+}
+#specialCountdown #contentsHead {
+  margin: -50px auto 0;
+}
+#specialCountdown #cdList {
+  width: 885px;
+  margin-left: 45px;
+}
+#specialCountdown #cdList li {
+  width: 295px;
+  height: 250px;
+  float: left;
+}
+#specialCountdown #cdList .cd-inner {
+  position: relative;
+  width: 295px;
+  height: 179px;
+  background: url(/p4u2/cdn/img/special/countdown/cd_bg.png) 0 0 no-repeat;
+  /*border: #ff0 solid 1px;*/
+}
+#specialCountdown #cdList .cd-chara {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  bottom: 31px;
+  z-index: 0;
+}
+#specialCountdown #cdList .cd-reserve {
+  position: absolute;
+  left: 172px;
+  top: 2px;
+  z-index: 10;
+}
+#specialCountdown #cdList .cd-num {
+  position: absolute;
+  left: 12px;
+  top: 105px;
+  z-index: 9;
+}
+#specialCountdown #cdList .cd-voice {
+  cursor: pointer;
+  position: absolute;
+  left: 180px;
+  top: 30px;
+  z-index: 9;
+}
+#specialCountdown #cdList .cd-0811 .cd-chara {
+  left: -17px !important;
+}
+#specialCountdown .btnReturn {
+  text-align: center;
+  clear: both;
+  margin-bottom: 250px;
+  margin-top: -50px;
+}
+#specialCountdown .btnReturn a {
+  display: inline-block !important;
+  margin-left: 20px;
+}
+#specialCountdown .btnReturn img {
+  margin-left: 20px;
+}
+#specialCountdown .block {
+  position: relative;
+}
+#specialCountdown .block h2.ttl {
+  z-index: 0;
+}
+
+/* =====================================================================================
+  SHOP GUIDE
+
+  update: 14/06/12
+
+
+====================================================================================== */
+#shopGuide {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+  /* IE7pfloat */
+  /* Hides from IE-mac \*/
+  /* -------------------------------------------------- RETURNボタン */
+}
+#shopGuide #container .inner {
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  margin: 50px 0 0 -490px;
+  padding-bottom: 280px;
+}
+#shopGuide #pageTitle {
+  margin: -17px auto 0;
+}
+#shopGuide #contentsHead {
+  margin: -50px auto 0;
+  text-align: center;
+}
+#shopGuide #contentsHead img {
+  margin-left: -103px;
+}
+#shopGuide #detailText {
+  text-align: left;
+}
+#shopGuide #detailText .note {
+  font-size: 12px;
+  line-height: 20px;
+}
+#shopGuide #detailText .note:first-child {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+#shopGuide #shopList {
+  width: 100%;
+  margin: -4px auto 0;
+  padding: 0px 0 12px;
+}
+#shopGuide #shopList li {
+  position: relative;
+  background: url(/p4u2/cdn/img/shopguide/shop_bg_thumb.png) 0 0 no-repeat;
+  width: 230px;
+  float: left;
+  display: inline;
+  margin-right: 14px;
+  margin-bottom: 12px;
+}
+#shopGuide #shopList li .box {
+  position: relative;
+  width: 230px;
+  height: 149px;
+}
+#shopGuide #shopList li .boxFooter {
+  position: relative;
+  background: #000;
+  width: 230px;
+  height: 91px;
+  margin-top: -1px;
+}
+#shopGuide #shopList li .boxFooter.none {
+  background: transparent;
+}
+#shopGuide #shopList li .boxFooter .text {
+  position: absolute;
+  left: 10px;
+  top: 32px;
+  z-index: 1;
+}
+#shopGuide #shopList li .boxFooter .btnClick {
+  position: absolute;
+  left: 148px;
+  top: 32px;
+  z-index: 1;
+  background: url(/p4u2/cdn/img/shopguide/img_click_blank.png) 0 0 no-repeat;
+  display: block;
+  width: 72px;
+  height: 51px;
+}
+#shopGuide #shopList li .boxFooter2 {
+  position: relative;
+  background: #000;
+  width: 230px;
+  height: 32px;
+  margin-top: -1px;
+}
+#shopGuide #shopList li .boxFooter2.none {
+  background: transparent;
+}
+#shopGuide #shopList li:nth-child(4n) {
+  margin-right: 0;
+}
+#shopGuide #shopList li .normal {
+  position: absolute;
+  left: 31px;
+  top: 102px;
+  z-index: 1;
+}
+#shopGuide #shopList li .limited {
+  position: absolute;
+  left: 118px;
+  top: 102px;
+  z-index: 1;
+}
+#shopGuide #shopList li .logo {
+  text-align: center;
+  position: relative;
+  top: 20px;
+}
+#shopGuide #shopList:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0.1px;
+  font-size: 0.1em;
+  line-height: 0;
+  clear: both;
+}
+#shopGuide #shopList {
+  display: inline-block;
+}
+#shopGuide * html #shopList {
+  height: 1%;
+}
+#shopGuide .btnReturn {
+  text-align: center;
+}
+#shopGuide .btnReturn a {
+  display: inline-block !important;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#shopGuide .btnReturn img {
+  margin-left: 20px;
+}
+#shopGuide .block {
+  position: relative;
+}
+#shopGuide .block h2.ttl {
+  z-index: 0;
+}
+
+/* =====================================================================================
+  DOWNLOAD CONTENTS
+
+  update: 14/04/20
+				
+				@include size(0,0);
+				@include absolute(0,0,0);
+				@include fixed(0,0,0);
+				@extend .clearfix;
+
+====================================================================================== */
+#dlcTop {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+}
+#dlcTop #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+  padding-bottom: 300px;
+}
+#dlcTop .fixedMinimum #container .inner {
+  margin: -280px 0 0 -490px;
+}
+#dlcTop .minimum #container .inner {
+  margin: -380px 0 0 -490px;
+}
+#dlcTop #pageTitle {
+  margin: 20px auto 30px;
+}
+#dlcTop .nextInfo {
+  position: relative;
+  left: -14px;
+  margin-bottom: 18px;
+}
+#dlcTop .nextInfo .infoText {
+  font-size: 15px;
+  color: #fff;
+  position: absolute;
+  top: 27px;
+  left: 240px;
+}
+#dlcTop #dlcList {
+  display: table;
+  margin: 0 auto;
+}
+#dlcTop #dlcList li {
+  position: relative;
+  float: left;
+  padding-right: 14px;
+  padding-bottom: 12px;
+  line-height: 0;
+}
+#dlcTop #dlcList li:nth-child(even) {
+  padding-right: 0;
+}
+#dlcTop #dlcList li .iconDate {
+  width: 89px;
+  height: 58px;
+  position: absolute;
+  left: 0px;
+  top: -18px;
+  z-index: 1;
+}
+#dlcTop #dlcList li.new:after {
+  content: '';
+  background: url(/p4u2/cdn/img/dlc/top/ico_new.png) 0 0 no-repeat;
+  width: 87px;
+  height: 51px;
+  opacity: 1;
+  position: absolute;
+  left: 0px;
+  top: -11px;
+  z-index: 1;
+}
+#dlcTop #dlcList .blank {
+  background: url(/p4u2/cdn/img/dlc/top/btn_dlc_blank.png) 0 0 no-repeat;
+  width: 475px;
+  height: 111px;
+}
+
+/* =====================================================================================
+  DLC 一覧ページ
+====================================================================================== */
+#dlcListUnder {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+}
+#dlcListUnder #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+  padding-bottom: 300px;
+}
+#dlcListUnder .fixedMinimum #container .inner {
+  margin: -280px 0 0 -490px;
+}
+#dlcListUnder .minimum #container .inner {
+  margin: -380px 0 0 -490px;
+}
+#dlcListUnder #pageTitle {
+  margin: 20px auto 30px;
+}
+#dlcListUnder .itemTitle {
+  text-align: left;
+  margin: 0 0 20px;
+}
+
+/* =====================================================================================
+  DLC 詳細一覧ページ
+====================================================================================== */
+#dlcListDetail {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* ---------------------------- 足立 */
+  /* ---------------------------- マリー */
+  /* ---------------------------- マーガレット */
+  /* -------------------------------------------------- RETURNボタン */
+}
+#dlcListDetail #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+  padding-bottom: 300px;
+}
+#dlcListDetail .fixedMinimum #container .inner {
+  margin: -280px 0 0 -490px;
+}
+#dlcListDetail .minimum #container .inner {
+  margin: -380px 0 0 -490px;
+}
+#dlcListDetail .itemList {
+  position: absolute;
+  left: 0px;
+  top: 580px;
+  z-index: 4;
+}
+#dlcListDetail.adachi .itemNamePlate {
+  position: absolute;
+  left: 316px;
+  top: 264px;
+  z-index: 3;
+}
+#dlcListDetail.adachi #personaImg {
+  position: absolute;
+  left: 163px;
+  top: 138px;
+  z-index: 1;
+}
+#dlcListDetail.adachi #charaImg {
+  position: absolute;
+  left: -63px;
+  top: 67px;
+  z-index: 2;
+}
+#dlcListDetail.marie .itemNamePlate {
+  position: absolute;
+  left: 329px;
+  top: 265px;
+  z-index: 3;
+}
+#dlcListDetail.marie #personaImg {
+  position: absolute;
+  left: 240px;
+  top: 104px;
+  z-index: 1;
+}
+#dlcListDetail.marie #charaImg {
+  position: absolute;
+  left: -105px;
+  top: 94px;
+  z-index: 2;
+}
+#dlcListDetail.marguerite #pageTitle {
+  margin-top: -40px !important;
+}
+#dlcListDetail.marguerite .itemNamePlate {
+  position: absolute;
+  left: 100px;
+  top: 500px;
+  z-index: 3;
+}
+#dlcListDetail.marguerite #personaImg {
+  position: absolute;
+  left: -90px;
+  top: 90px;
+  z-index: 1;
+}
+#dlcListDetail.marguerite #charaImg {
+  position: absolute;
+  left: 360px;
+  top: -9px;
+  z-index: 2;
+}
+#dlcListDetail.marguerite .itemList {
+  margin-top: 130px !important;
+}
+#dlcListDetail.marguerite .btnReturn2 {
+  top: 880px !important;
+}
+#dlcListDetail .btnReturn2 {
+  position: absolute;
+  left: 380px;
+  top: 750px;
+  z-index: 4;
+  text-align: center;
+}
+#dlcListDetail .btnReturn2 a {
+  display: inline-block !important;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+#dlcListUnder,
+#dlcListDetail {
+  /* -------------------------------------------------- ページタイトル */
+  /* -------------------------------------------------- RETURNボタン */
+}
+#dlcListUnder #pageTitle,
+#dlcListDetail #pageTitle {
+  margin: 20px auto 30px;
+}
+#dlcListUnder .itemList,
+#dlcListDetail .itemList {
+  border: 3px solid #65a9e7;
+  border-collapse: collapse;
+}
+#dlcListUnder .itemList tr.new .itemIcon:after,
+#dlcListDetail .itemList tr.new .itemIcon:after {
+  content: '';
+  background: url(/p4u2/cdn/img/dlc/ico_new_s.png) 0 0 no-repeat;
+  width: 53px;
+  height: 31px;
+  opacity: 1;
+  position: absolute;
+  left: 0px;
+  top: -7px;
+  z-index: 1;
+}
+#dlcListUnder .itemList td,
+#dlcListDetail .itemList td {
+  position: relative;
+  color: #fff;
+  text-align: left;
+  background: #000;
+  border: 3px solid #65a9e7;
+  border-collapse: collapse;
+  vertical-align: middle;
+}
+#dlcListUnder .itemList td.itemName,
+#dlcListDetail .itemList td.itemName {
+  color: #65a9e7;
+  font-size: 14px;
+  line-height: 20px;
+  width: 120px;
+  padding: 16px;
+}
+#dlcListUnder .itemList td.itemIcon,
+#dlcListDetail .itemList td.itemIcon {
+  background: #65a9e7;
+}
+#dlcListUnder .itemList td.desc,
+#dlcListDetail .itemList td.desc {
+  padding: 15px;
+}
+#dlcListUnder .itemList td.desc .text,
+#dlcListDetail .itemList td.desc .text {
+  font-size: 11px;
+  line-height: 16px;
+}
+#dlcListUnder .itemList td.desc .note,
+#dlcListDetail .itemList td.desc .note {
+  font-size: 8px;
+  line-height: 12px;
+  margin: 4px 0 0;
+}
+#dlcListUnder .itemList td.yen,
+#dlcListDetail .itemList td.yen {
+  color: #65a9e7;
+  font-size: 14px;
+  text-align: center;
+  width: 56px;
+}
+#dlcListUnder .itemList td.btnOnline,
+#dlcListDetail .itemList td.btnOnline {
+  text-align: center;
+  width: 194px;
+}
+#dlcListUnder .btnReturn,
+#dlcListDetail .btnReturn {
+  text-align: center;
+}
+#dlcListUnder .btnReturn a,
+#dlcListDetail .btnReturn a {
+  display: inline-block !important;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+/* =====================================================================================
+  MODE
+
+  update: 14/05/21
+				
+				@include size(0,0);
+				@include absolute(0,0,0);
+				@include fixed(0,0,0);
+				@extend .clearfix;
+
+====================================================================================== */
+#guideTop {
+  /* -------------------------------------------------- コンテナの位置設定 */
+  /* -------------------------------------------------- ページタイトル */
+  /* -------------------------------------------------- リサイズ時のコンテナ位置設定 */
+}
+#guideTop #container .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -490px;
+  text-align: left;
+  padding-bottom: 300px;
+}
+#guideTop #pageTitle {
+  margin: 0 auto 0 115px;
+}
+#guideTop .pickup {
+  background: url(/p4u2/cdn/img/guide/bg_caps.png) 0 0 no-repeat;
+  margin: -10px 0 30px 90px;
+  width: 748px;
+  height: 64px;
+}
+#guideTop .pickup p {
+  display: block;
+  margin-left: 230px;
+  color: #fff;
+  font-size: 15px;
+  padding-top: 27px;
+}
+#guideTop .captions {
+  margin: 0 0 5px 145px;
+}
+#guideTop #guideList {
+  display: table;
+  margin: 0 0 20px 110px;
+}
+#guideTop #guideList li {
+  position: relative;
+  width: 730px;
+  height: 175px;
+  margin-bottom: 7px;
+}
+#guideTop #guideList li .img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+#guideTop #guideList li .btnMovie {
+  position: absolute;
+  left: 504px;
+  top: 5px;
+  z-index: 1;
+}
+#guideTop .btnReturn {
+  width: 234px;
+  margin: 0 auto;
+}
+#guideTop .fixedMinimum #container .inner {
+  margin: -330px 0 0 -490px;
+}
+#guideTop .minimum #container .inner {
+  margin: -330px 0 0 -490px;
+}
+
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 14px -> line-height: 24px; 
+        見出し：    font-size: ---; -> line-height: ---; margin: ---; padding: ---;
+        中見出し： font-size: ---; -> line-height: ---;
+				
+				@include size(0,0);
+				@include absolute(0,0,0);
+				@include fixed(0,0,0);
+				@extend .clearfix;
+
+====================================================================================== */
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (max-width: 480px) {
+  /* Smart device only */
+}

@@ -1,0 +1,618 @@
+@charset "UTF-8";
+
+/*================================================
+ *  CSSリセット
+ ================================================*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;font-weight:normal;}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+/*================================================
+ *  一般・共通設定
+ ================================================*/
+body {
+	font-size:14px;
+	font-family:"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	line-height:1.6;
+}
+
+header {
+	width:100%;
+	height:400px;
+}
+
+#contents {
+	width:980px;
+	margin:0 auto;
+}
+
+a {
+	color:#043771;
+}
+a:hover {
+	color:#144d8d;
+}
+
+h1 {
+	font-size:28px;
+}
+
+h2 {
+	margin-top:50px;
+	margin-bottom:0.5em;
+	font-size:24px;
+	color:#333;
+	text-align:left;
+}
+
+h3 {
+	margin-bottom:0.25em;
+	font-size:18px;
+}
+
+h4 {
+	margin-bottom:0.25em;
+	font-size:16px;
+}
+
+h5 {
+	margin-bottom:0.25em;
+	padding-left:25px;
+	font-size:16px;
+	background:url('../images/bg_arrow_black.png') 0 50% no-repeat;
+}
+
+h6 {
+	margin-bottom:0.25em;
+	padding-left:5px;
+	font-size:16px;
+	font-weight:bold;
+}
+
+p {
+	margin:0 0 1em 0;
+}
+
+img {
+	vertical-align:bottom;
+}
+
+em {
+	font-weight:bold;
+}
+
+strong {
+	font-weight:bold;
+	color:#ff0000;
+}
+
+pre {
+	margin:1em 0;
+	padding:1em;
+}
+
+blockquote {
+	margin-bottom:1em;
+	padding:1em;
+	border:1px dotted #ddd;
+	border-left:5px solid #ddd;
+}
+
+ul,ol,dl {
+	margin:0 0 1em 0;
+}
+ul li {
+	list-style:disc;
+}
+ol li {
+	list-style:decimal;
+}
+li {
+	margin-left:2em;
+}
+
+dt {
+	margin-bottom:0.5em;
+	border-bottom:1px dotted #ddd;
+}
+dd {
+	margin-bottom:1em;
+}
+
+table {
+	width:100%;
+	margin-bottom:1em;
+	border-collapse:collapse;
+	border:1px solid #ddd;
+}
+th {
+	padding:10px;
+	text-align:center;
+	vertical-align:middle;
+	border:1px solid #ddd;
+	background:#f1f1f1;
+}
+td {
+	padding:10px;
+	text-align:left;
+	border:1px solid #ddd;
+}
+
+/*================================================
+ *  汎用クラス
+ ================================================*/
+
+/* グローバルナブ */
+#contents nav{
+	padding-top: 20px;
+	width: 100%;
+}
+
+ul.foo {
+  width: 100%;
+  /*border:1px solid red;*/
+  padding:0;
+  font-size:0px;
+	display: table;
+}
+
+ul.foo li {
+	color: #a0a09f;
+	line-height: 30px;
+  width:118px;
+	height: 30px;
+  /*border:1px solid black;*/
+  display: table-cell;
+  text-align: center;
+  font-size:16px;
+}
+
+ul.foo li:hover{
+	background-color: #ccc;
+}
+
+/*ul.foo li:first-child {
+  height:60px;
+}*/
+
+ul.foo li a {
+  display: block;
+	color: #a0a09f;
+	text-decoration: none;
+}
+
+ul.foo li a:hover{
+  color: #333;
+}
+
+.content_header{
+	width: 100%;
+	padding-top: 10px;
+	height: 40px;
+	display: flow-root;
+}
+
+/* シェアボタン */
+#shareButtonImage{
+	float: left;
+}
+
+.lang_select{
+	float: right;
+}
+
+#shareButtonImage img{
+	margin-right: 10px;
+	width: 40px;
+	height: 40px;
+}
+
+/* テキストボックス */
+.item1{
+	padding-top: 20px;
+}
+
+/* 写真中央寄せ */
+.imgC {
+	clear:both;
+	overflow:hidden;
+	margin-bottom:50px;
+	text-align:center;
+}
+.imgC img {
+	border-radius:5px;
+	margin-bottom:0.5em;
+}
+
+/* 写真左寄せ */
+.imgL {
+	clear:both;
+	overflow:hidden;
+	margin-bottom:50px;
+}
+.imgL img {
+	float:left;
+	margin:0 1em 0.5em 0;
+	border-radius:5px;
+}
+
+/* 写真右寄せ */
+.imgR {
+	clear:both;
+	overflow:hidden;
+	margin-bottom:50px;
+}
+.imgR img {
+	float:right;
+	margin:0 0 1em 0.5em;
+	border-radius:5px;
+}
+
+/* 2カラム（スマートフォンでは1カラム) */
+.twoCol {
+	overflow:hidden;
+	margin-bottom:50px;
+}
+.twoColInner {
+	overflow:hidden;
+	margin-right:-2%;
+}
+.twoColInner div {
+	width:48%;
+	float:left;
+	margin-right:2%;
+}
+.twoColInner div:nth-child(2n+1) {
+	clear:both;
+}
+.twoColInner img {
+	width:100%;
+	margin-bottom:0.5em;
+	border-radius:5px;
+}
+
+/* 3カラム（スマートフォンでは1カラム) */
+.threeCol {
+	overflow:hidden;
+	margin-bottom:50px;
+}
+.threeColInner {
+	overflow:hidden;
+	margin-right:-3%;
+}
+.threeColInner div {
+	width:31%;
+	float:left;
+	margin-right:2%;
+}
+.threeColInner div:nth-child(3n+1) {
+	clear:both;
+}
+.threeColInner img {
+	width:100%;
+	margin-bottom:0.5em;
+	border-radius:5px;
+}
+
+/* ボタン（タイプ1） */
+.btn01 a {
+	display:block;
+	padding:2% 2% 2% 50px;
+	color:#fff;
+	text-decoration:none;
+	border-radius:5px;
+	background:#1b1b1b url('../images/bg_arrow_white.png') 20px 50% no-repeat;
+	transition:all 0.2s ease 0s;
+}
+.btn01 a:hover {
+	background:#2e2e2e url('../images/bg_arrow_white.png') 20px 50% no-repeat;
+	transition:all 0.2s ease 0s;
+}
+
+/* ボタン（タイプ2） */
+.btn02 a {
+	display:block;
+	padding:2%;
+	color:#1b1b1b;
+	text-decoration:none;
+	border-radius:5px;
+	border:1px solid #1b1b1b;
+	background:#fff;
+	transition:all 0.2s ease 0s;
+}
+.btn02 a:hover {
+	color:#fff;
+	background:#1b1b1b;
+	transition:all 0.2s ease 0s;
+}
+
+
+
+/*================================================
+ *  コンテント
+ ================================================*/
+
+#contents .item_title_content1{
+ 	width: 100%;
+ 	height: 330px;
+	display: flow-root;
+	margin-top: 30px;
+ }
+
+.item_title_content1 .item_title_content1_left{
+	float: left;
+	width: 150px;
+	margin-right: 20px;
+}
+
+.item_title_content1 .item_title_content1_right{
+	float: left;
+	width: 100px;
+}
+
+.item_title_content1_right img{
+	width: 200px;
+	height: 300px;
+}
+
+#contents .item1{
+}
+
+/*================================================
+ *  ヘッダー
+ ================================================*/
+header {
+	position:relative;
+}
+
+header#header1{
+	height: 0px;
+}
+
+
+header #h1_wrapper{
+	position:absolute;
+	display: table;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	width:330px;
+	height:100px;
+	z-index:10;
+	background-color: #ccc;
+}
+
+header #h1_wrapper h1 {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: #FFF;
+}
+
+header nav.navbar{
+	display: none;
+}
+
+/*================================================
+ *  メイン
+ ================================================*/
+main {
+	width:100%;
+}
+
+section {
+	margin-bottom:10%;
+}
+
+/*================================================
+ *  フッター
+ ================================================*/
+footer {
+	clear:both;
+	padding:2% 0;
+	font-size:11px;
+	text-align:center;
+}
+
+/*================================================
+ *  ページトップへの戻り
+ ================================================*/
+.totop {
+	position:fixed;
+	bottom:15px;
+	right:15px;
+}
+.totop a {
+	display:block;
+	text-decoration:none;
+}
+.totop img {
+	background:#000;
+}
+.totop img:hover {
+	background:#333;
+}
+
+/*================================================
+ *  スライドショー
+ ================================================*/
+.slide {
+	overflow:hidden;
+	position:relative;
+}
+.slideInner {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.slideInner li {
+	position:absolute;
+	width:100%;
+	margin:0;
+	padding:0;
+	background-color:#fff;
+	background-position:50% 0;
+	background-repeat:no-repeat;
+}
+
+.slideInner li img{
+	height: 400px;
+}
+
+
+
+/*================================================
+ *  アクセス
+ ================================================*/
+
+.access-main {
+	display: flow-root;
+	margin-top: 30px;
+}
+.access-google-map {
+	width: 50%;
+}
+.access-google-map iframe {
+	width: 100%;
+}
+
+.access-content {
+	margin-left: 52%;
+}
+
+/*================================================
+ *  特産品
+ ================================================*/
+
+.goods-main {
+	margin-top: 30px;
+}
+.goods-main img {
+	margin-top: 20px;
+}
+
+/*================================================
+ *  岩手山
+ ================================================*/
+
+.item_title_content1{
+	width: 100%;
+}
+
+.item_title_content1_image_mt img{
+	width: 650px;
+	height: 300px;
+}
+
+p.img_center{
+	text-align: center;
+}
+
+/*================================================
+ *  タブレット向けデザイン
+ ================================================*/
+/* スクロールバーを考慮して20px大きいサイズで切り替え */
+@media screen and (max-width:979px) {
+
+	#contents {
+		box-sizing:border-box;
+		width:100%;
+		padding:0 10px;
+	}
+}
+
+/*================================================
+ *  スマートフォン向けデザイン
+ ================================================*/
+@media screen and (max-width:767px) {
+
+	header#header1{
+		height: 50px;
+	}
+
+	header nav.navbar{
+		position: fixed;
+		top: 0;
+		right: 0;
+		display: inline-block;
+		background-color: rgba(0,0,0,1);
+		border: 0px;
+		z-index: 20;
+		width: 100%;
+	}
+
+	.content_header{
+		height: 90px;
+	}
+
+	#shareButtonImage{
+		width: 100%;
+		display: flow-root;
+	}
+
+	.lang_select{
+		padding-top: 10px;
+		float: left;
+	}
+
+	#contents .item_title_content1{
+		height: 360px;
+	}
+
+	.item_title_content1 .item_title_content1_left{
+		width: 100%;
+		margin-right: 0;
+	}
+
+
+	header nav.navbar #myNavbar{
+		background-color: rgba(0,0,0,1);
+	}
+
+	header nav.navbar button{
+		background-color: black;
+	}
+
+	#contents nav{
+		display: none;
+	}
+
+	.access-main {
+		margin-top: 50px;
+	}
+	.access-google-map {
+		width: 100%;
+	}
+	.access-google-map iframe {
+		width: 100%;
+	}
+
+	.access-content {
+		margin-left: 0%;
+	}
+
+	.goods-main {
+		margin-top: 50px;
+	}
+}
+
+
+/*================================================
+ *  言語切り替え
+ ================================================*/
+
+<style type="text/css">
+	body {
+		font-size: xx-large;
+		text-align: center;
+		margin-top: 100px;
+	}
+	.select-lang {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		padding-left: 5px;
+		color: #fff;
+		border: none;
+	}
+</style>
