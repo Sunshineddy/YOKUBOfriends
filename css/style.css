@@ -20,7 +20,7 @@ header {
 }
 
 #contents {
-	width:980px;
+	width:480px;
 	margin:0 auto;
 }
 
@@ -147,40 +147,32 @@ td {
 }
 
 ul.foo {
+  display: table;
+  table-layout: fixed;
   width: 100%;
-  /*border:1px solid red;*/
-  padding:0;
-  font-size:0px;
-	display: table;
+  font-size: 0px;
 }
 
 ul.foo li {
 	color: #a0a09f;
 	line-height: 30px;
-  width:118px;
-	height: 30px;
-  /*border:1px solid black;*/
-  display: table-cell;
-  text-align: center;
-  font-size:16px;
+  	display: table-cell;
+  	text-align: center;
+  	font-size:16px;
 }
 
 ul.foo li:hover{
-	background-color: #ccc;
+	/*background-color: #ccc;*/
 }
-
-/*ul.foo li:first-child {
-  height:60px;
-}*/
 
 ul.foo li a {
   display: block;
-	color: #a0a09f;
+	/*color: #a0a09f;*/
 	text-decoration: none;
 }
 
 ul.foo li a:hover{
-  color: #333;
+  /*color: #333;*/
 }
 
 .content_header{
@@ -379,7 +371,6 @@ header #h1_wrapper{
 	width:330px;
 	height:100px;
 	z-index:10;
-	background-color: #ccc;
 }
 
 header #h1_wrapper h1 {
@@ -512,19 +503,19 @@ p.img_center{
  *  タブレット向けデザイン
  ================================================*/
 /* スクロールバーを考慮して20px大きいサイズで切り替え */
-@media screen and (max-width:979px) {
+/*@media screen and (max-width:979px) {
 
 	#contents {
 		box-sizing:border-box;
 		width:100%;
 		padding:0 10px;
 	}
-}
+}*/
 
 /*================================================
  *  スマートフォン向けデザイン
  ================================================*/
-@media screen and (max-width:767px) {
+/*@media screen and (max-width:767px) {
 
 	header#header1{
 		height: 50px;
@@ -594,7 +585,7 @@ p.img_center{
 	.goods-main {
 		margin-top: 50px;
 	}
-}
+}*/
 
 
 /*================================================
