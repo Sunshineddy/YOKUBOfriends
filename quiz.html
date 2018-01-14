@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="ja">
 <head>
 <meta charset="utf-8">
 <title>欲望フレンズ</title>
@@ -8,8 +7,6 @@
 <meta name="description" content="">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
-<link rel="stylesheet" href="./css/selectbox.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
 <script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
@@ -17,9 +14,6 @@
 <script type="text/javascript" src="js/jquery.slideshow.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
-<script type="text/javascript" src="./js/select-language.js" charset="utf-8"></script>
 <script>
 $(function($){
 	$('html').smoothscroll({easing : 'swing', speed : 1000, margintop : 30, headerfix : $('nav')});
@@ -54,9 +48,6 @@ $(function() {
 
 <div id="wrapper">
 <header id="header1">
-	
-</header>
-<header>
 	<!--<div id="smartNavbar">
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -77,17 +68,24 @@ $(function() {
 			</div>
 		</nav>
 	</div>-->
+</header>
+<header>
 	<div id="h1_wrapper">
 		<h1><a href="index.html"><img src="images/title.jpg" alt=""></a></h1>
 	</div>
 	<div class="slide">
 		<ul class="slideInner">
-			<li><img src="images/hanji.jpg" alt=""></li>
-			<li><img src="images/yuta.jpg" alt=""></li>
-			<li><img src="images/sgtk.JPG" alt=""></li>
+			<li><img src="images/c_hanji.jpg" alt=""></li>
+			<li><img src="images/c_yuta.jpg" alt=""></li>
+			<li><img src="images/c_sgtk.JPG" alt=""></li>
+			<li><img src="images/c_guchiyama.jpg" alt=""></li>
+			<li><img src="images/c_akira.jpg" alt=""></li>
+			<li><img src="images/c_izumi.JPG" alt=""></li>
+			<li><img src="images/c_nuo.JPG" alt=""></li>
+			<li><img src="images/c_kuwayama.jpg" alt=""></li>
+			<li><img src="images/c_rikito.jpg" alt=""></li>
 		</ul>
 	</div><!-- /.slide -->
-
 </header>
 
 <div id="contents">
@@ -99,6 +97,13 @@ $(function() {
 			<li><a href="character.html"><img src="images/btn_character.jpg" width="80%" border="0" onMouseOver="this.src='images/btn_character_over.jpg'" onMouseOut="this.src='images/btn_character.jpg'"></a></li>
 		</ul>
 	</nav>
+
+	<p>SGTKの得意なことは？</p>
+	<p　class="foo">
+		<input type="radio" name="food" value="1">きんにく
+		<input type="radio" name="food" value="2">ドラム
+		<input type="radio" name="food" value="3">早起き
+	</p>
 
 </div><!-- /.contents -->
 
