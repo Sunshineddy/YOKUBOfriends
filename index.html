@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="ja">
 <head>
 <meta charset="utf-8">
 <title>欲望フレンズ</title>
@@ -8,161 +7,58 @@
 <meta name="description" content="">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
-<link rel="stylesheet" href="./css/selectbox.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
 <script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
 <script type="text/javascript" src="js/jquery.scrollshow.js"></script>
 <script type="text/javascript" src="js/jquery.slideshow.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
-<script type="text/javascript" src="./js/select-language.js" charset="utf-8"></script>
-<script>
-$(function($){
-	$('html').smoothscroll({easing : 'swing', speed : 1000, margintop : 30, headerfix : $('nav')});
-	$('.totop').scrollshow({position : 500});
-	$('.slide').slideshow({
-		touch        : false,
-		bgImage      : true,
-		autoSlide    : true,
-		effect       : 'fade',
-		repeat       : true,
-		easing       : 'swing',
-		interval     : 5000,
-		duration     : 1000,
-		imgHoverStop : false,
-		navHoverStop : false,
-		navImg       : false,
-		navImgCustom : false,
-		navImgSuffix : ''
-	});
-});
-
-$(function() {
-  $('input').click(function() {
-    if ($(this).val() == 2) alert('正解！');
-    else alert('はずれ！');
-  });
-});
-</script>
-
+<script type="text/javascript" src="js/script.js"></script>
 </head>
-<body>
 
+<body background="bg.png">
 <div id="wrapper">
-<header id="header1">
-	
-</header>
+
 <header>
-<<<<<<< HEAD
-	<!--<div id="smartNavbar">
-=======
-	<div id="smartNavbar">
->>>>>>> origin/master
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav">
-<<<<<<< HEAD
-						<li><a href="index.html">TOP</a></li>
-						<li><a href="quiz.html">QUIZ</a></li>
-						<li><a href="character.html">CHARACTER</a></li>
-=======
-						<li><a href="index.html">HOME</a></li>
-						<li><a href="index.html">おみくじ</a></li>
-						<li><a href="index.html">特産品紹介</a></li>
-						<li><a href="index.html">お祭り</a></li>
-						<li><a href="index.html">観光地</a></li>
-						<li><a href="index.html">アクセス</a></li>
->>>>>>> origin/master
-					</ul>
-				</div>
-			</div>
-		</nav>
-<<<<<<< HEAD
-	</div>-->
-=======
->>>>>>> origin/master
-	<div id="h1_wrapper">
-		<h1><a href="index.html"><img src="images/title.jpg" alt=""></a></h1>
+	<div class="h1_wrapper" id="h1_wrapper">
+		<h1><a href="index.html"><img src="images/title.png"　alt="" width="80%"></h1></a>
 	</div>
-	<div class="slide">
-		<ul class="slideInner">
-			<li><img src="images/hanji.jpg" alt=""></li>
-			<li><img src="images/yuta.jpg" alt=""></li>
-			<li><img src="images/sgtk.JPG" alt=""></li>
-		</ul>
-	</div><!-- /.slide -->
-
 </header>
 
-<div id="contents">
-<<<<<<< HEAD
-=======
-	<div class="content_header">
-		<form name="select_form" class="lang_select">
-			<select name="select_lang" id="select_lang" class="select-lang styled-select blue rounded">
-				<option value="">
-					言語選択
-				</option>
-				<option value="">
-					日本語
-				</option>
-				<option value="en">
-					English
-				</option>
-			</select>
-		</form>
-	</div>
-
-	<div class="goods-main content">
-		<div class="row">
-			<div class="col-sm-4" style="text-align: center">
-				<img src="images/akira.jpg" alt="" width="100">
-			</div>
-			<div class="col-sm-8">
-				<h3>滝沢すいか</h3>
-				<p>
-県内一の出荷量を誇る滝沢産のすいか、通称「滝沢すいか」。<br>
-水はけの良い火山灰土の農地と、昼夜の大きな寒暖差が良質のすいかを育てます。<br>
-甘い果汁がたっぷりと濃縮され、シャキシャキした爽やかな食感が楽しめる夏のごちそう。<br>
-毎年夏が訪れると、沿道の直売所には、たくさんのすいかが並び、人々の目を引きます。<br>
-夏の風物詩として全国にファンを持つ特産品です。
-				</p>
-			</div>
-		</div>
-	</div>
->>>>>>> origin/master
-
-	<nav>
+<main>
+	<div class="content" id="contents">
+		<a class="content_header">
+			<img src="images/bar.png" alt="" width="100%">
+		</a>
 		<ul class="foo">
-			<li><a href="index.html"><img src="images/btn_top.jpg" width="80%" border="0" onMouseOver="this.src='images/btn_top_over.jpg'" onMouseOut="this.src='images/btn_top.jpg'"></a></li>
-			<li><a href="quiz.html"><img src="images/btn_quiz.jpg" width="80%" border="0" onMouseOver="this.src='images/btn_quiz_over.jpg'" onMouseOut="this.src='images/btn_quiz.jpg'"></a></li>
-			<li><a href="character.html"><img src="images/btn_character.jpg" width="80%" border="0" onMouseOver="this.src='images/btn_character_over.jpg'" onMouseOut="this.src='images/btn_character.jpg'"></a></li>
+			<li><a href="index.html"><img src="images/chikaarashi.png" border="0" onMouseDown="this.src='images/chikaarashi2.png'" onMouseOver="this.src='images/chikaarashi2.png'" onMouseOut="this.src='images/chikaarashi.png'"></a>
+			</li>
+			<li><a href="index.html"><img src="images/nishimura.png" border="0" oonMouseDown="this.src='images/nishimura2.png'" onMouseOver="this.src='images/nishimura2.png'" onMouseOut="this.src='images/nishimura.png'"></a>
+			</li>
+			<li><a href="index.html"><img src="images/jyo.png" border="0" onMouseDown="this.src='images/jyo2.png'" onMouseOver="this.src='images/jyo2.png'" onMouseOut="this.src='images/jyo.png'"></a>
+			</li>
+			<li><a href="index.html"><img src="images/izumi.png" border="0" onMouseDown="this.src='images/izumi2.png'" onMouseOver="this.src='images/izumi2.png'" onMouseOut="this.src='images/izumi.png'"></a>
+			</li>
+			<li><a href="quiz_sasaki.html"><img src="images/sasaki.png" border="0"onMouseDown="this.src='images/sasaki2.png'" onMouseOver="this.src='images/sasaki2.png'" onMouseOut="this.src='images/sasaki.png'"></a>
+			</li>
+			<li><a href="index.html"><img src="images/sugawara.png" border="0" onMouseDown="this.src='images/sugawara2.png'" onMouseOver="this.src='images/sugawara2.png'" onMouseOut="this.src='images/sugawara.png'"></a>
+			</li>
+			<li><a href="index.html"><img src="images/tateno.png" border="0" onMouseDown="this.src='images/tateno2.png'" onMouseOver="this.src='images/tateno2.png'" onMouseOut="this.src='images/tateno.png'"></a>
+			</li>
+			<li><a href="index.html"><img src="images/yamaguchi.png" border="0" onMouseDown="this.src='images/yamaguchi2.png'" onMouseOver="this.src='images/yamaguchi2.png'" onMouseOut="this.src='images/yamaguchi.png'"></a>
+			</li>
+			<li><a href="index.html"><img src="images/kuwayama.png" border="0" onMouseDown="this.src='images/kuwayama2.png'" onMouseOver="this.src='images/kuwayama2.png'" onMouseOut="this.src='images/kuwayama.png'"></a>
+			</li>
+			<li><a href="index.html"><img src="images/hanji.png" border="0" onMouseDown="this.src='images/hanji2.png'" onMouseOver="this.src='images/hanji2.png'" onMouseOut="this.src='images/hanji.png'"></a>
+			</li>
 		</ul>
-	</nav>
-
-</div><!-- /.contents -->
+	</div><!-- /.contents -->
+</main><!-- /.main -->
 
 <footer>
-		<div><small>Copyright &#169; 2017 - 2018 SEGA Games freashers All Rights Reserved.</small></div><!-- /.copyright -->
+		<a class="footer"><img src="images/copyright.png" alt="" width="100%"></a><!-- /.copyright -->
 </footer>
 
-<div class="totop">
-	<a href="#">
-		<img src="images/totop.png" alt="ページのトップへ戻る">
-	</a>
-</div><!-- /.totop -->
 </div>
 </body>
 </html>
