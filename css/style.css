@@ -27,13 +27,28 @@ header {
 	height:120px;
 	float: center;
 	margin: 0 auto;
-	padding: 0;
 }
 
 #contents {
 	width:800px;
+	height:500px;
+	float:center;
 	margin:5;
 	padding:5px;
+}
+
+#contents_left {
+	float: left;
+	width:400px;
+	height:500px;
+	display: flow-root;
+}
+
+#contents_right {
+	float: right;
+	width:400px;
+	height:500px;
+	display: flow-root;
 }
 
 a{
@@ -47,9 +62,7 @@ h1 {
 	font-size:28px;
 }
 h2 {
-	margin-top:50px;
-	margin-bottom:0.5em;
-	font-size:24px;
+	font-size:40px;
 	color:#333;
 	text-align:left;
 }
@@ -140,7 +153,7 @@ td {
  ================================================*/
 
 /* グローバルナブ */
-#contents nav{
+#content nav{
 	padding-top: auto;
 	width: 100%;
 	margin: 10px;
@@ -174,27 +187,32 @@ ul.foo li a {
 	display: flow-root;
 }
 
-.content_left{
-	width: 20%;
-	padding-top: 0px;
-	height: 100px;
-	display: flow-root;
-	float: :left;
-}
-
-.content_right{
-	width: 70%;
-	padding-top: 0px;
-	height: 100px;
-	display: flow-root;
-	float: right;
-}
-
 .footer{
 	width: 100%;
 	padding-top: 0px;
 	height: 40px;
 	display: flow-root;
+}
+
+/* 位置調整 */
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.absolute_bottom {
+	position: absolute;
+	bottom: 50px;
+	float: center;
+}
+
+.absolute_text {
+	position: absolute;
+	top: 40px;
+	left: 50px;
 }
 
 /* 画像中央寄せ */
@@ -241,6 +259,10 @@ ul.foo li a {
 	float:right;
 	margin:5px;
 	border-radius:5px;
+}
+
+.txtC {
+	text-align: center;
 }
 
 /* ビデオ */
@@ -315,6 +337,6 @@ footer {
 @media screen and (max-width:767px) {
 
 	header{
-		width: 90%
+		
 	}
 }
