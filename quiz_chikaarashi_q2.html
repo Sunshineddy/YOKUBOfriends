@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>欲望フレンズ</title>
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
+<script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
+<script type="text/javascript" src="js/jquery.scrollshow.js"></script>
+<script type="text/javascript" src="js/jquery.slideshow.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('input').click(function() {
+    if ($(this).val() == 2) {
+    	quiz_sum = quiz_sum + 1;
+    	alert('正解！');
+	}    	
+    else alert('はずれ！');
+  });
+});
+</script>
+
+</head>
+
+<body background="images/nishimura4.png">
+<div id="wrapper">
+
+<header>
+	
+	<a href="index.html"><img class="imgL" src="images/title2.png" alt="" width="30%"></a>
+</header>
+
+<h2><a><img class="imgL" src="images/quiz_Q.png">　最近話しかけている相手は？</a></h2>
+<div id="contents_left">
+	<figure class="relative"><a href="index.html"><img src="images/quiz_box.png">
+		<figcaption class="absolute_text"><h3><p>テレビ</p><figcaption>
+	</a></h3></figure><br><br>
+	<figure class="relative"><a href="index.html"><img src="images/quiz_box.png">
+		<figcaption class="absolute_text"><h3><p>写真</p><figcaption>
+	</a></h3></figure>
+</div>
+<div id="contents_right">
+	<figure class="relative"><a href="index.html"><img src="images/quiz_box.png">
+		<figcaption class="absolute_text"><h3><p>2次元</p></h3<figcaption>
+	</a></figure><br><br>
+	<figure class="relative"><a href="index.html"><img src="images/quiz_box.png">
+		<figcaption class="absolute_text"><h3><p>ぬいぐるみ</p></h3><figcaption>
+	</a></figure>
+</div><!-- /.contents -->
+
+<footer>
+	<a class="footer"><img src="images/copyright.png" alt="" width="100%"></a><!-- /.copyright -->
+</footer>
+
+</div>
+</body>
+</html>

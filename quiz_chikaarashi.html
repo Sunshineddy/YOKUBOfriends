@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>欲望フレンズ</title>
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
+<script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
+<script type="text/javascript" src="js/jquery.scrollshow.js"></script>
+<script type="text/javascript" src="js/jquery.slideshow.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('input').click(function() {
+    if ($(this).val() == 2) {
+    	quiz_sum = quiz_sum + 1;
+    	alert('正解！');
+	}    	
+    else alert('はずれ！');
+  });
+});
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+
+<header>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<a>　　　　　</a>
+	<a href="index.html"><img src="images/title2.png" alt="" width="30%"></a>
+</header>
+
+<div id="contents_left">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<ul class="foo">
+		<li><a href="quiz_chikaarashi_q1.html"><img src="images/quiz_Level1.png" alt="" width="100%"></a></li>
+		<li><a href="bonus/chikaarashi_q1.jpg"><img src="images/quiz_unlock.png" alt="" width="60%"></a></li>
+	</ul>
+	<ul class="foo">
+		<li><a href="quiz_chikaarashi_q2.html"><img src="images/quiz_Level2.png" alt="" width="100%"></a></li>
+		<li><a href="bonus/chikaarashi_q2.jpg"><img src="images/quiz_unlock.png" alt="" width="60%"></a></li>
+	</ul>
+	<ul class="foo">
+		<li><a href="quiz_chikaarashi_q3.html"><img src="images/quiz_Level3.png" alt="" width="100%"></a></li>
+		<li><a href="bonus/chikaarashi_q3.mp4"><img src="images/quiz_unlock.png" alt="" width="60%"></a></li>
+	</ul>
+</div>
+<div id="contents_right">
+	<div class="relative">
+		<img src="images/chikaarashi3.png" alt="" width="100%">
+		<img src="images/chikaarashi5.png" alt="" width="100%" class="absolute_bottom">
+	</div>
+</div><!-- /.contents -->
+
+<footer>
+	<a class="footer"><img src="images/copyright.png" alt="" width="100%"></a><!-- /.copyright -->
+</footer
+>
+</div>
+</body>
+</html>
