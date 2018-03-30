@@ -19,7 +19,7 @@ body {
 #wrapper {  
 	width: 800px; 
 	margin: 0 auto; 
-	padding: 0;  
+	padding: 0; 
 }  
 
 header {
@@ -147,6 +147,18 @@ td {
 	text-align:left;
 	border:1px solid #ddd;
 }
+
+#bgIndex {
+	background-image: url("../imeges/bg.png");
+}
+
+#bgSasaki {
+	background-image: url("../images/sasaki4.png");
+	background-position: top;
+	background-repeat:no-repeat;
+	background-size: auto;
+}
+
 
 /*================================================
  *  汎用クラス
