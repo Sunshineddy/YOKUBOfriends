@@ -4,54 +4,47 @@ var quiz_num = 30;	// クイズ全体の数
 var quiz_numper = 3;	// １人当たりのクイズの数
 // りきと
 var chikaarashi = 0;
-var chikaarashi_q1 = false;
-var chikaarashi_q2 = false;
-var chikaarashi_q3 = false;
 // ゆうた
-var nishimura = 0;
-var nishimura_q1 = false;
-var nishimura_q2 = false;
-var nishimura_q3 = false;
+var nishimura = 3;
 // のーちゃん
-var jyo = 0;
-var jyo_q1 = false;
-var jyo_q2 = false;
-var jyo_q3 = false;
+var jyo = 6;
 // いずみん
-var izumi = 0;
-var izumi_q1 = false;
-var izumi_q2 = false;
-var izumi_q3 = false;
+var izumi = 9;
 // あきら
-var sasaki = 0;
-var sasaki_q1= false;
-var sasaki_q2= false;
-var sasaki_q3= false;
+var sasaki = 12;
 // すがたく
-var sugawara = 0;
-var sugawara_q1 = false;
-var sugawara_q2 = false;
-var sugawara_q3 = false;
+var sugawara = 15;
 // たてちゃん
-var tateno = 0;
-var tateno_q1 = false;
-var tateno_q2 = false;
-var tateno_q3 = false;
+var tateno = 18;
 // ぐちやま
-var yamaguchi = 0;
-var yamaguchi_q1 = false;
-var yamaguchi_q2 = false;
-var yamaguchi_q3 =false;
+var yamaguchi = 21;
 // くわちゃん
-var kuwayama = 0;
-var kuwayama_q1 = false;
-var kuwayama_q2 = false;
-var kuwayama_q3 = false;
+var kuwayama = 24;
 // はんじちゃん
-var hanji = 0;
-var hanji_q1 = false;
-var hanji_q2 = false;
-var hanji_q3 = false;
+var hanji = 27;
+
+// クイズの判定
+function answerJudge(name, no, quiz) {
+	if(quiz == true){
+		var qData = JSON.parse(sessionStorage.getItem("quizData"));
+
+		switch(name){
+			case chikaarashi: qData[chikaarashi+no-1] = true; break;
+			case nishimura: qData[nishimura+no-1] = true; break;
+			case jyo: qData[jyo+no-1] = true; break;
+			case izumi: qData[izumi+no-1] = true; break;
+			case sasaki: qData[sasaki+no-1] = true; break;
+			case sugawara: qData[sugawara+no-1] = true; break;
+			case tateno: qData[tateno+no-1] = true; break;
+			case yamaguchi: qData[yamaguchi+no-1] = true; break;
+			case kuwayama: qData[kuwayama+no-1] = true; break;
+			case hanji: qData[hanji+no-1] = true; break;
+			default: break;
+		}
+		
+		sessionStorage.setItem("quizData", JSON.stringify(qData));	// 値の保持
+	}
+}
 
 /***************** video *****************/
 var video = document.getElementById('video');	//video要素の取得
