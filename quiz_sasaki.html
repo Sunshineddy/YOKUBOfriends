@@ -15,19 +15,44 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
-$(function() {
-  $('input').click(function() {
-    if ($(this).val() == 2) {
-    	quiz_sum = quiz_sum + 1;
-    	alert('正解！');
-	}    	
-    else alert('はずれ！');
-  });
+function iconChanger(){
+	var qData = JSON.parse(sessionStorage.getItem("quizData"));
+	if(qData[sasaki]) {
+		document.getElementById("sasaki_icon1").src="images/quiz_unlock.png"
+		document.getElementById("sasaki_href1").href="bonus/sasaki_q1.jpg"
+	}
+	else {
+		document.getElementById("sasaki_icon1").src="images/quiz_lock.png"
+		document.getElementById("sasaki_href1").href="#lock"
+	}
+	if(qData[sasaki+1]) {
+		document.getElementById("sasaki_icon2").src="images/quiz_unlock.png"
+		document.getElementById("sasaki_href2").href="bonus/sasaki_q2.png"
+	}
+	else {
+		document.getElementById("sasaki_icon2").src="images/quiz_lock.png"
+		document.getElementById("sasaki_href2").href="#lock"
+	}
+	if(qData[sasaki+2]) {
+		document.getElementById("sasaki_icon3").src="images/quiz_unlock.png"
+		document.getElementById("sasaki_href3").href="bonus/sasaki_q3.jpg"
+	}
+	else {
+		document.getElementById("sasaki_icon3").src="images/quiz_lock.png"
+		document.getElementById("sasaki_href3").href="#lock"
+	}
+	sessionStorage.setItem("quizData", JSON.stringify(qData));	// 値の保持
+}
+
+$(function(){
+    $('a[href=#lock]').click(function(e){
+        e.preventDefault();
+    })
 });
 </script>
 </head>
 
-<body>
+<body id="bgSasaki" onload="iconChanger();">
 <div id="wrapper">
 
 <header>
@@ -35,9 +60,8 @@ $(function() {
 	<br>
 	<br>
 	<br>
-	<br>
 	<a>　　　　　</a>
-	<a href="index.html"><img src="images/title2.png" alt="" width="30%"></a>
+	<a href="index2.html"><img src="images/title2.png" alt="" width="40%"></a>
 </header>
 
 <div id="contents_left">
@@ -48,20 +72,20 @@ $(function() {
 	<br>
 	<ul class="foo">
 		<li><a href="quiz_sasaki_q1.html"><img src="images/quiz_Level1.png" alt="" width="100%"></a></li>
-		<li><a href="bonus/sasaki_q1.jpg"><img src="images/quiz_unlock.png" alt="" width="60%"></a></li>
+		<li><a id="sasaki_href1"><img id="sasaki_icon1" alt="" width="60%"></a></li>
 	</ul>
 	<ul class="foo">
 		<li><a href="quiz_sasaki_q2.html"><img src="images/quiz_Level2.png" alt="" width="100%"></a></li>
-		<li><a href="bonus/sasaki_q2.png"><img src="images/quiz_unlock.png" alt="" width="60%"></a></li>
+		<li><a id="sasaki_href2"><img id="sasaki_icon2" alt="" width="60%"></a></li>
 	</ul>
 	<ul class="foo">
 		<li><a href="quiz_sasaki_q3.html"><img src="images/quiz_Level3.png" alt="" width="100%"></a></li>
-		<li><a href="bonus/sasaki_q3.jpg"><img src="images/quiz_unlock.png" alt="" width="60%"></a></li>
+		<li><a id="sasaki_href3"><img id="sasaki_icon3" alt="" width="60%"></a></li>
 	</ul>
 </div>
 <div id="contents_right">
 	<div class="relative">
-		<img src="images/sasaki3.png" alt="" width="100%">
+		<a><img src="images/sasaki3.png" alt="" width="100%">
 		<img src="images/sasaki5.png" alt="" width="100%" class="absolute_bottom">
 	</div>
 </div><!-- /.contents -->
