@@ -15,43 +15,73 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
-$(function() {
-  $('input').click(function() {
-    if ($(this).val() == 2) {
-    	quiz_sum = quiz_sum + 1;
-    	alert('正解！');
-	}    	
-    else alert('はずれ！');
-  });
-});
+function quizButton(quiz, num) {
+	if(quiz) {
+		switch(num) {
+			case 1: document.getElementById("chikaarashi_q11").src="images/quiz_good.png";
+				document.getElementById("chikaarashi_q12").src="images/quiz_bad.png";
+				document.getElementById("chikaarashi_q13").src="images/quiz_bad.png";
+				document.getElementById("chikaarashi_q14").src="images/quiz_bad.png";
+				break;
+			case 2: document.getElementById("chikaarashi_q11").src="images/quiz_bad.png";
+				document.getElementById("chikaarashi_q12").src="images/quiz_good.png";
+				document.getElementById("chikaarashi_q13").src="images/quiz_bad.png";
+				document.getElementById("chikaarashi_q14").src="images/quiz_bad.png";
+				break;
+			case 3: document.getElementById("chikaarashi_q11").src="images/quiz_bad.png";
+				document.getElementById("chikaarashi_q12").src="images/quiz_bad.png";
+				document.getElementById("chikaarashi_q13").src="images/quiz_good.png";
+				document.getElementById("chikaarashi_q14").src="images/quiz_bad.png";
+				break;
+			case 4: document.getElementById("chikaarashi_q11").src="images/quiz_bad.png";
+				document.getElementById("chikaarashi_q12").src="images/quiz_bad.png";
+				document.getElementById("chikaarashi_q13").src="images/quiz_bad.png";
+				document.getElementById("chikaarashi_q14").src="images/quiz_good.png";
+				break;
+			default: break;
+		}
+	}
+	else {
+		switch(num) {
+			case 1: document.getElementById("chikaarashi_q11").src="images/quiz_bad.png";
+				break;
+			case 2: document.getElementById("chikaarashi_q12").src="images/quiz_bad.png";
+				break;
+			case 3: document.getElementById("chikaarashi_q13").src="images/quiz_bad.png";
+				break;
+			case 4: document.getElementById("chikaarashi_q14").src="images/quiz_bad.png";
+				break;
+			default: break;
+		}
+	}
+}
 </script>
-
 </head>
 
-<body background="images/nishimura4.png">
+<body id="bgChikaarashi">
 <div id="wrapper">
 
 <header>
-	
-	<a href="index.html"><img class="imgL" src="images/title2.png" alt="" width="30%"></a>
+	<a href="index2.html"><img class="imgL" src="images/title2.png" alt="" width="30%"></a>
 </header>
 
-<h2><a><img class="imgL" src="images/quiz_Q.png">　好きなものはシットコムともうひとつは何？</a></h2>
+<h2><a><img class="imgL" src="images/quiz_Q.png">　好きなものはシットコムともう一つは何？</a></h2>
 <div id="contents_left">
-	<figure class="relative"><a href="index.html"><img src="images/quiz_box.png">
-		<figcaption class="absolute_text"><h3><p>ショッピング</p><figcaption>
-	</a></h3></figure><br><br>
-	<figure class="relative"><a href="index.html"><img src="images/quiz_box.png">
-		<figcaption class="absolute_text"><h3><p>貯金</p><figcaption>
+	<figure class="relative"><a onclick="quizButton(false, 1);"><img src="images/quiz_box.png">
+		<figcaption class="absolute_text"><h3><p>ショッピング</p><figcaption><img class="absolute_image" id="chikaarashi_q11">
+	</a></h3></figure><br>
+	<figure class="relative"><a onclick="quizButton(false, 2);"><img src="images/quiz_box.png">
+		<figcaption class="absolute_text"><h3><p>貯金</p><figcaption><img class="absolute_image" id="chikaarashi_q12">
 	</a></h3></figure>
 </div>
 <div id="contents_right">
-	<figure class="relative"><a href="index.html"><img src="images/quiz_box.png">
-		<figcaption class="absolute_text"><h3><p>帰省</p></h3<figcaption>
-	</a></figure><br><br>
-	<figure class="relative"><a href="index.html"><img src="images/quiz_box.png">
-		<figcaption class="absolute_text"><h3><p>ランニング</p></h3><figcaption>
+	<figure class="relative"><a onclick="quizButton(true, 3);  answerJudge(chikaarashi, 1, true);"><img src="images/quiz_box.png">
+		<figcaption class="absolute_text"><h3><p>帰省</p></h3><figcaption><img class="absolute_image" id="chikaarashi_q13">
+	</a></figure><br>
+	<figure class="relative"><a onclick="quizButton(false, 4);"><img src="images/quiz_box.png">
+		<figcaption class="absolute_text"><h3><p>ランニング</p></h3><figcaption><img class="absolute_image" id="chikaarashi_q14">
 	</a></figure>
+	<figure class="relative"><a href="quiz_chikaarashi_q2.html"><img class="imgR" src="images/quiz_toLevel2.png"></a></figure>
 </div><!-- /.contents -->
 
 <footer>
