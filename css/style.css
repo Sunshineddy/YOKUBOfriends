@@ -154,7 +154,7 @@ td {
 
 #bgSasaki {
 	background-image: url("../images/sasaki4.png");
-	background-position: top center;
+	background-position: center top;
 	background-repeat:no-repeat;
 	background-size: auto;
 }
