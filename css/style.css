@@ -40,14 +40,14 @@ header {
 #contents_left {
 	float: left;
 	width:400px;
-	height:500px;
+	height:550px;
 	display: flow-root;
 }
 
 #contents_right {
 	float: right;
 	width:400px;
-	height:500px;
+	height:550px;
 	display: flow-root;
 }
 
@@ -152,8 +152,71 @@ td {
 	background-image: url("../imeges/bg.png");
 }
 
+#bgChikaarashi {
+	background-image: url("../images/chikaarashi4.png");
+	background-position: center 0px;
+	background-repeat:no-repeat;
+	background-size: auto;
+}
+
+#bgNishimura {
+	background-image: url("../images/nishimura4.png");
+	background-position: center 0px;
+	background-repeat:no-repeat;
+	background-size: auto;
+}
+
+#bgJyo {
+	background-image: url("../images/jyo4.png");
+	background-position: center 0px;
+	background-repeat:no-repeat;
+	background-size: auto;
+}
+
+#bgIzumi {
+	background-image: url("../images/izumi4.png");
+	background-position: center 0px;
+	background-repeat:no-repeat;
+	background-size: auto;
+}
+
 #bgSasaki {
 	background-image: url("../images/sasaki4.png");
+	background-position: center 0px;
+	background-repeat:no-repeat;
+	background-size: auto;
+}
+
+#bgSugawara {
+	background-image: url("../images/sugawara4.png");
+	background-position: center 0px;
+	background-repeat:no-repeat;
+	background-size: auto;
+}
+
+#bgTateno {
+	background-image: url("../images/tateno4.png");
+	background-position: center 0px;
+	background-repeat:no-repeat;
+	background-size: auto;
+}
+
+#bgYamaguchi {
+	background-image: url("../images/yamaguchi4.png");
+	background-position: center 0px;
+	background-repeat:no-repeat;
+	background-size: auto;
+}
+
+#bgKuwayama {
+	background-image: url("../images/kuwayama4.png");
+	background-position: center 0px;
+	background-repeat:no-repeat;
+	background-size: auto;
+}
+
+#bgHanji {
+	background-image: url("../images/hanji4.png");
 	background-position: center 0px;
 	background-repeat:no-repeat;
 	background-size: auto;
@@ -225,6 +288,12 @@ ul.foo li a {
 	position: absolute;
 	top: 40px;
 	left: 50px;
+}
+
+.absolute_image {
+	position: absolute;
+	top: -25px;
+	left: 70px;
 }
 
 /* 画像中央寄せ */
