@@ -370,7 +370,7 @@ td {
 		url("../images/sasaki6.png"),
 		url("../images/bg.png");
 	background-position: 
-		center 0px,
+		top center,
 		center 0px;
 	background-repeat: 
 		no-repeat,
