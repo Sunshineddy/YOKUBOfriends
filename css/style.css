@@ -699,21 +699,4 @@ footer {
  ================================================*/
 @media screen and (max-width:767px) {
 
-	#bgSasaki2 {
-		background-image: 
-			url("../images/sasaki6.png"),
-			url("../images/bg.png");
-		background-position: 
-			300px 0px,
-			center 0px;
-		/*margin: 0 auto;*/
-		background-repeat: 
-			no-repeat,
-			repeat;
-		background-size: 
-			auto,
-			auto;
-
-		left: 100px;
-	}
 }
