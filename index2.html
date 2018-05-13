@@ -16,7 +16,7 @@
 <script type="text/javascript" src="js/script.js"></script>
 </head>
 
-<body id="bgIndex">
+<body id="bgIndex" onload="miconChanger();">
 <div id="wrapper">
 
 <header>
@@ -31,34 +31,279 @@
 			<img src="images/bar.png" alt="" width="100%">
 		</a>
 		<ul class="foo">
-			<li><a href="quiz_chikaarashi.html"><img src="images/chikaarashi.png" border="0" onMouseDown="this.src='images/chikaarashi2.png'" onMouseOver="this.src='images/chikaarashi2.png'" onMouseOut="this.src='images/chikaarashi.png'"></a>
+			<li><a href="quiz_chikaarashi.html"><img id="chikaarashi" src="images/chikaarashi.png" border="0" onMouseDown="this.src='images/chikaarashi2.png'" onMouseOver="this.src='images/chikaarashi2.png'" onMouseOut="this.src='images/chikaarashi.png'"></a>
+			<a id="icon1"><img id="chikaarashi_micon1"></a>
+			<a id="icon2"><img id="chikaarashi_micon2"></a>
+			<a id="icon3"><img id="chikaarashi_micon3"></a>
 			</li>
-			<li><a href="quiz_nishimura.html"><img src="images/nishimura.png" border="0" oonMouseDown="this.src='images/nishimura2.png'" onMouseOver="this.src='images/nishimura2.png'" onMouseOut="this.src='images/nishimura.png'"></a>
+			<li><a href="quiz_nishimura.html"><img id="nishimura" src="images/nishimura.png" border="0" oonMouseDown="this.src='images/nishimura2.png'" onMouseOver="this.src='images/nishimura2.png'" onMouseOut="this.src='images/nishimura.png'"></a>
+			<a id="icon1"><img id="nishimura_micon1"></a>
+			<a id="icon2"><img id="nishimura_micon2"></a>
+			<a id="icon3"><img id="nishimura_micon3"></a>
 			</li>
-			<li><a href="quiz_jyo.html"><img src="images/jyo.png" border="0" onMouseDown="this.src='images/jyo2.png'" onMouseOver="this.src='images/jyo2.png'" onMouseOut="this.src='images/jyo.png'"></a>
+			<li><a href="quiz_jyo.html"><img id="jyo" src="images/jyo.png" border="0" onMouseDown="this.src='images/jyo2.png'" onMouseOver="this.src='images/jyo2.png'" onMouseOut="this.src='images/jyo.png'"></a>
+			<a id="icon1"><img id="jyo_micon1"></a>
+			<a id="icon2"><img id="jyo_micon2"></a>
+			<a id="icon3"><img id="jyo_micon3"></a>
 			</li>
-			<li><a href="quiz_izumi.html"><img src="images/izumi.png" border="0" onMouseDown="this.src='images/izumi2.png'" onMouseOver="this.src='images/izumi2.png'" onMouseOut="this.src='images/izumi.png'"></a>
+			<li><a href="quiz_izumi.html"><img id="izumi" src="images/izumi.png" border="0" onMouseDown="this.src='images/izumi2.png'" onMouseOver="this.src='images/izumi2.png'" onMouseOut="this.src='images/izumi.png'"></a>
+			<a id="icon1"><img id="izumi_micon1"></a>
+			<a id="icon2"><img id="izumi_micon2"></a>
+			<a id="icon3"><img id="izumi_micon3"></a>
 			</li>
-			<li><a href="quiz_sasaki.html"><img src="images/sasaki.png" border="0"onMouseDown="this.src='images/sasaki2.png'" onMouseOver="this.src='images/sasaki2.png'" onMouseOut="this.src='images/sasaki.png'"></a>
+			<li><a href="quiz_sasaki.html"><img id="sasaki" src="images/sasaki.png" border="0"onMouseDown="this.src='images/sasaki2.png'" onMouseOver="this.src='images/sasaki2.png'" onMouseOut="this.src='images/sasaki.png'"></a>
+			<a id="icon1"><img id="sasaki_micon1"></a>
+			<a id="icon2"><img id="sasaki_micon2"></a>
+			<a id="icon3"><img id="sasaki_micon3"></a>
 			</li>
-			<li><a href="quiz_sugawara.html"><img src="images/sugawara.png" border="0" onMouseDown="this.src='images/sugawara2.png'" onMouseOver="this.src='images/sugawara2.png'" onMouseOut="this.src='images/sugawara.png'"></a>
+			<li><a href="quiz_sugawara.html"><img id="sugawara" src="images/sugawara.png" border="0" onMouseDown="this.src='images/sugawara2.png'" onMouseOver="this.src='images/sugawara2.png'" onMouseOut="this.src='images/sugawara.png'"></a>
+			<a id="icon1"><img id="sugawara_micon1"></a>
+			<a id="icon2"><img id="sugawara_micon2"></a>
+			<a id="icon3"><img id="sugawara_micon3"></a>
 			</li>
-			<li><a href="quiz_tateno.html"><img src="images/tateno.png" border="0" onMouseDown="this.src='images/tateno2.png'" onMouseOver="this.src='images/tateno2.png'" onMouseOut="this.src='images/tateno.png'"></a>
+			<li><a href="quiz_tateno.html"><img id="tateno" src="images/tateno.png" border="0" onMouseDown="this.src='images/tateno2.png'" onMouseOver="this.src='images/tateno2.png'" onMouseOut="this.src='images/tateno.png'"></a>
+			<a id="icon1"><img id="tateno_micon1"></a>
+			<a id="icon2"><img id="tateno_micon2"></a>
+			<a id="icon3"><img id="tateno_micon3"></a>
 			</li>
-			<li><a href="quiz_yamaguchi.html"><img src="images/yamaguchi.png" border="0" onMouseDown="this.src='images/yamaguchi2.png'" onMouseOver="this.src='images/yamaguchi2.png'" onMouseOut="this.src='images/yamaguchi.png'"></a>
+			<li><a href="quiz_yamaguchi.html"><img id="yamaguchi" src="images/yamaguchi.png" border="0" onMouseDown="this.src='images/yamaguchi2.png'" onMouseOver="this.src='images/yamaguchi2.png'" onMouseOut="this.src='images/yamaguchi.png'"></a>
+			<a id="icon1"><img id="yamaguchi_micon1"></a>
+			<a id="icon2"><img id="yamaguchi_micon2"></a>
+			<a id="icon3"><img id="yamaguchi_micon3"></a>
 			</li>
-			<li><a href="quiz_kuwayama.html"><img src="images/kuwayama.png" border="0" onMouseDown="this.src='images/kuwayama2.png'" onMouseOver="this.src='images/kuwayama2.png'" onMouseOut="this.src='images/kuwayama.png'"></a>
+			<li><a href="quiz_kuwayama.html"><img id="kuwayama" src="images/kuwayama.png" border="0" onMouseDown="this.src='images/kuwayama2.png'" onMouseOver="this.src='images/kuwayama2.png'" onMouseOut="this.src='images/kuwayama.png'"></a>
+			<a id="icon1"><img id="kuwayama_micon1"></a>
+			<a id="icon2"><img id="kuwayama_micon2"></a>
+			<a id="icon3"><img id="kuwayama_micon3"></a>
 			</li>
-			<li><a href="quiz_hanji.html"><img src="images/hanji.png" border="0" onMouseDown="this.src='images/hanji2.png'" onMouseOver="this.src='images/hanji2.png'" onMouseOut="this.src='images/hanji.png'"></a>
+			<li><a href="quiz_hanji.html"><img id="hanji" src="images/hanji.png" border="0" onMouseDown="this.src='images/hanji2.png'" onMouseOver="this.src='images/hanji2.png'" onMouseOut="this.src='images/hanji.png'"></a>
+			<a id="icon1"><img id="hanji_micon1"></a>
+			<a id="icon2"><img id="hanji_micon2"></a>
+			<a id="icon3"><img id="hanji_micon3"></a>
 			</li>
 		</ul>
 	</div><!-- /.contents -->
 </main><!-- /.main -->
 
 <footer>
-	<a class="footer"><img src="images/copyright.png" alt="" width="100%"></a><!-- /.copyright -->
+	<a class="footer"><img src="images/copyright.png" alt=""></a><!-- /.copyright -->
 </footer>
 
 </div>
+
+<script type="text/javascript">
+function miconChanger(){
+	var qData = JSON.parse(sessionStorage.getItem("quizData"));
+	/* 正解数カウント */
+	/*var sum = 0;
+	for(var i = 0; i < 30; i++) {
+		if(qData[i]) sum++;
+	}
+	if(sum > 1) {
+		document.getElementById("chikaarashi").src = "images/chikaarashi2.png";
+		document.getElementById("nihsimura").src = "images/nishimura2.png";
+		document.getElementById("jyo").src = "images/jyo2.png";
+		document.getElementById("izumi").src = "images/izumi2.png";
+		document.getElementById("sasaki").src = "images/sasaki2.png";
+		document.getElementById("sugawara").src = "images/sugawara2.png";
+		document.getElementById("tateno").src = "images/tateno2.png";
+		document.getElementById("yamaguchi").src = "images/yamaguchi2.png";
+		document.getElementById("kuwayama").src = "images/kuwayama2.png";
+		document.getElementById("hanji").src = "images/hanji2.png";
+	}*/
+	/* りきと */
+	if(qData[chikaarashi]) {
+		document.getElementById("chikaarashi_micon1").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("chikaarashi_micon1").src="images/quiz_off.png"
+	}
+	if(qData[chikaarashi+1]) {
+		document.getElementById("chikaarashi_micon2").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("chikaarashi_micon2").src="images/quiz_off.png"
+	}
+	if(qData[chikaarashi+2]) {
+		document.getElementById("chikaarashi_micon3").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("chikaarashi_micon3").src="images/quiz_off.png"
+	}
+	/* ゆうた */
+	if(qData[nishimura]) {
+		document.getElementById("nishimura_micon1").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("nishimura_micon1").src="images/quiz_off.png"
+	}
+	if(qData[nishimura+1]) {
+		document.getElementById("nishimura_micon2").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("nishimura_micon2").src="images/quiz_off.png"
+	}
+	if(qData[nishimura+2]) {
+		document.getElementById("nishimura_micon3").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("nishimura_micon3").src="images/quiz_off.png"
+	}
+	/* のーちゃん */
+	if(qData[jyo]) {
+		document.getElementById("jyo_micon1").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("jyo_micon1").src="images/quiz_off.png"
+	}
+	if(qData[jyo+1]) {
+		document.getElementById("jyo_micon2").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("jyo_micon2").src="images/quiz_off.png"
+	}
+	if(qData[jyo+2]) {
+		document.getElementById("jyo_micon3").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("jyo_micon3").src="images/quiz_off.png"
+	}
+	/* いずみん */
+	if(qData[izumi]) {
+		document.getElementById("izumi_micon1").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("izumi_micon1").src="images/quiz_off.png"
+	}
+	if(qData[izumi+1]) {
+		document.getElementById("izumi_micon2").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("izumi_micon2").src="images/quiz_off.png"
+	}
+	if(qData[izumi+2]) {
+		document.getElementById("izumi_micon3").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("izumi_micon3").src="images/quiz_off.png"
+	}
+	/* あきら */
+	if(qData[sasaki]) {
+		document.getElementById("sasaki_micon1").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("sasaki_micon1").src="images/quiz_off.png"
+	}
+	if(qData[sasaki+1]) {
+		document.getElementById("sasaki_micon2").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("sasaki_micon2").src="images/quiz_off.png"
+	}
+	if(qData[sasaki+2]) {
+		document.getElementById("sasaki_micon3").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("sasaki_micon3").src="images/quiz_off.png"
+	}
+	/* すがたく */
+	if(qData[sugawara]) {
+		document.getElementById("sugawara_micon1").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("sugawara_micon1").src="images/quiz_off.png"
+	}
+	if(qData[sugawara+1]) {
+		document.getElementById("sugawara_micon2").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("sugawara_micon2").src="images/quiz_off.png"
+	}
+	if(qData[sugawara+2]) {
+		document.getElementById("sugawara_micon3").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("sugawara_micon3").src="images/quiz_off.png"
+	}
+	/* たてさん */
+	if(qData[tateno]) {
+		document.getElementById("tateno_micon1").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("tateno_micon1").src="images/quiz_off.png"
+	}
+	if(qData[tateno+1]) {
+		document.getElementById("tateno_micon2").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("tateno_micon2").src="images/quiz_off.png"
+	}
+	if(qData[tateno+2]) {
+		document.getElementById("tateno_micon3").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("tateno_micon3").src="images/quiz_off.png"
+	}
+	/* ぐちやま */
+	if(qData[yamaguchi]) {
+		document.getElementById("yamaguchi_micon1").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("yamaguchi_micon1").src="images/quiz_off.png"
+	}
+	if(qData[yamaguchi+1]) {
+		document.getElementById("yamaguchi_micon2").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("yamaguchi_micon2").src="images/quiz_off.png"
+	}
+	if(qData[yamaguchi+2]) {
+		document.getElementById("yamaguchi_micon3").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("yamaguchi_micon3").src="images/quiz_off.png"
+	}
+	/* くわちゃん */
+	if(qData[kuwayama]) {
+		document.getElementById("kuwayama_micon1").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("kuwayama_micon1").src="images/quiz_off.png"
+	}
+	if(qData[kuwayama+1]) {
+		document.getElementById("kuwayama_micon2").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("kuwayama_micon2").src="images/quiz_off.png"
+	}
+	if(qData[kuwayama+2]) {
+		document.getElementById("kuwayama_micon3").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("kuwayama_micon3").src="images/quiz_off.png"
+	}
+	/* はんじ */
+	if(qData[hanji]) {
+		document.getElementById("hanji_micon1").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("hanji_micon1").src="images/quiz_off.png"
+	}
+	if(qData[hanji+1]) {
+		document.getElementById("hanji_micon2").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("hanji_micon2").src="images/quiz_off.png"
+	}
+	if(qData[hanji+2]) {
+		document.getElementById("hanji_micon3").src="images/quiz_on.png"
+	}
+	else {
+		document.getElementById("hanji_micon3").src="images/quiz_off.png"
+	}
+	sessionStorage.setItem("quizData", JSON.stringify(qData));	// 値の保持
+}
+</script>
+
 </body>
 </html>

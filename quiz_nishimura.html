@@ -14,6 +14,48 @@
 <script type="text/javascript" src="js/jquery.slideshow.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body id="bgNishimura2" onload="iconChanger();">
+<div id="wrapper">
+
+<header>
+	<br>
+	<br>
+	<br>
+	<br>
+	<a href="index2.html"><img class="imgL" src="images/title2.png" alt="" width="35%"></a>
+</header>
+
+<div id="contents_left">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<ul class="foo">
+		<li><a href="quiz_nishimura_q1.html"><img id="quizLevel" src="images/quiz_Level1.png" alt="" width="100%"></a></li>
+		<li><a id="nishimura_href1"><img id="nishimura_icon1" alt="" width="40%"></a></li>
+	</ul>
+	<ul class="foo">
+		<li><a href="quiz_nishimura_q2.html"><img id="quizLevel" src="images/quiz_Level2.png" alt="" width="100%"></a></li>
+		<li><a id="nishimura_href2"><img id="nishimura_icon2" alt="" width="40%"></a></li>
+	</ul>
+	<ul class="foo">
+		<li><a href="quiz_nishimura_q3.html"><img id="quizLevel" src="images/quiz_Level3.png" alt="" width="100%"></a></li>
+		<li><a id="nishimura_href3"><img id="nishimura_icon3" alt="" width="40%"></a></li>
+	</ul>
+</div><!-- /.contents -->
+
+<footer>
+	<a class="footer"><img src="images/copyright.png"></a><!-- /.copyright -->
+</footer
+>
+</div>
+
 <script type="text/javascript">
 function iconChanger(){
 	var qData = JSON.parse(sessionStorage.getItem("quizData"));
@@ -50,42 +92,6 @@ $(function(){
     })
 });
 </script>
-</head>
 
-<body id="bgNishimura" onload="iconChanger();">
-<div id="wrapper">
-
-<header>
-	<a href="index2.html"><img class="imgL" src="images/title2.png" alt="" width="30%"></a>
-</header>
-
-<div id="contents_left">
-	<br>
-	<br>
-	<ul class="foo">
-		<li><a href="quiz_nishimura_q1.html"><img src="images/quiz_Level1.png" alt="" width="100%"></a></li>
-		<li><a id="nishimura_href1"><img id="nishimura_icon1" alt="" width="60%"></a></li>
-	</ul>
-	<ul class="foo">
-		<li><a href="quiz_nishimura_q2.html"><img src="images/quiz_Level2.png" alt="" width="100%"></a></li>
-		<li><a id="nishimura_href2"><img id="nishimura_icon2" alt="" width="60%"></a></li>
-	</ul>
-	<ul class="foo">
-		<li><a href="quiz_nishimura_q3.html"><img src="images/quiz_Level3.png" alt="" width="100%"></a></li>
-		<li><a id="nishimura_href3"><img id="nishimura_icon3" alt="" width="60%"></a></li>
-	</ul>
-</div>
-<div id="contents_right">
-	<div class="relative">
-		<a><img src="images/nishimura3.png" alt="" width="100%">
-		<img src="images/nishimura5.png" alt="" width="100%" class="absolute_bottom">
-	</div>
-</div><!-- /.contents -->
-
-<footer>
-	<a class="footer"><img src="images/copyright.png" alt="" width="100%"></a><!-- /.copyright -->
-</footer
->
-</div>
 </body>
 </html>
