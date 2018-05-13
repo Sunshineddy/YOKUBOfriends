@@ -95,13 +95,13 @@
 function miconChanger(){
 	var qData = JSON.parse(sessionStorage.getItem("quizData"));
 	/* 正解数カウント */
-	/*var sum = 0;
+	var sum = 0;
 	for(var i = 0; i < 30; i++) {
 		if(qData[i]) sum++;
 	}
-	if(sum > 1) {
+	if(sum > 29) {
 		document.getElementById("chikaarashi").src = "images/chikaarashi2.png";
-		document.getElementById("nihsimura").src = "images/nishimura2.png";
+		document.getElementById("nishimura").src = "images/nishimura2.png";
 		document.getElementById("jyo").src = "images/jyo2.png";
 		document.getElementById("izumi").src = "images/izumi2.png";
 		document.getElementById("sasaki").src = "images/sasaki2.png";
@@ -110,7 +110,7 @@ function miconChanger(){
 		document.getElementById("yamaguchi").src = "images/yamaguchi2.png";
 		document.getElementById("kuwayama").src = "images/kuwayama2.png";
 		document.getElementById("hanji").src = "images/hanji2.png";
-	}*/
+	}
 	/* りきと */
 	if(qData[chikaarashi]) {
 		document.getElementById("chikaarashi_micon1").src="images/quiz_on.png"
