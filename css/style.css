@@ -372,11 +372,12 @@ td {
 	background-position: 
 		center 0px,
 		center 0px;
+	/*margin: 0 auto;*/
 	background-repeat: 
 		no-repeat,
 		repeat;
 	background-size: 
-		auto,
+		cover,
 		auto;
 }
 
@@ -699,19 +700,304 @@ footer {
  ================================================*/
 @media screen and (max-width:767px) {
 
-	#bgSasaki2 {
-		background-image: 
-			url("../images/sasaki6.png"),
-			url("../images/bg.png");
-		background-position: 
-			 0px,
-			center 0px;
-		/*margin: 0 auto;*/
-		background-repeat: 
-			no-repeat,
-			repeat;
-		background-size: 
-			cover,
-			auto;
-	}
+	#bgChikaarashi {
+	background-image: 
+		url("../images/chikaarashi4.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgNishimura {
+	background-image: 
+		url("../images/nishimura4.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgJyo {
+	background-image: 
+		url("../images/jyo4.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgIzumi {
+	background-image: 
+		url("../images/izumi4.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgSasaki {
+	background-image: 
+		url("../images/sasaki4.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgSugawara {
+	background-image: 
+		url("../images/sugawara4.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgTateno {
+	background-image: 
+		url("../images/tateno4.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgYamaguchi {
+	background-image: 
+		url("../images/yamaguchi4.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgKuwayama {
+	background-image: 
+		url("../images/kuwayama4.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgHanji {
+	background-image: 
+		url("../images/hanji4.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgChikaarashi2 {
+	background-image: 
+		url("../images/chikaarashi6.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgNishimura2 {
+	background-image: 
+		url("../images/nishimura6.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgJyo2 {
+	background-image: 
+		url("../images/jyo6.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgIzumi2 {
+	background-image: 
+		url("../images/izumi6.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgSasaki2 {
+	background-image: 
+		url("../images/sasaki6.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	/*margin: 0 auto;*/
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgSugawara2 {
+	background-image: 
+		url("../images/sugawara6.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgTateno2 {
+	background-image: 
+		url("../images/tateno6.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgYamaguchi2 {
+	background-image: 
+		url("../images/yamaguchi6.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgKuwayama2 {
+	background-image: 
+		url("../images/kuwayama6.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
+
+#bgHanji2 {
+	background-image: 
+		url("../images/hanji6.png"),
+		url("../images/bg.png");
+	background-position: 
+		100px 0px,
+		center 0px;
+	background-repeat: 
+		no-repeat,
+		repeat;
+	background-size: 
+		cover,
+		auto;
+}
 }
