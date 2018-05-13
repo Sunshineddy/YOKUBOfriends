@@ -704,13 +704,14 @@ footer {
 			url("../images/sasaki6.png"),
 			url("../images/bg.png");
 		background-position: 
-			100px 0px,
+			center 0px,
 			center 0px;
+		/*margin: 0 auto;*/
 		background-repeat: 
 			no-repeat,
 			repeat;
 		background-size: 
-			auto,
+			cover,
 			auto;
 	}
 }
